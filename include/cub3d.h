@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/24 17:00:08 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/25 01:38:14 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,14 @@ typedef struct			s_player
 	double				speed;
 	double				rotation;
 }						t_player;
+
+typedef struct			s_map
+{
+	int					width;
+	int					height;
+
+	int					**map;
+}	t_map;
 
 typedef struct			s_pic
 {
@@ -158,19 +166,13 @@ typedef struct			s_cub
 	void				*win;
 	void				*img;
 
-	char				*path_no;
-	char				*path_we;
-	char				*path_so;
-	char				*path_ea;
-	char				*path_s;
-	int					clr_ceilling;
-	int					clr_floor;
 	int					map_x;
 	int					map_y;
 	int					**map;
 
 	int					save_bmp;
 
+	t_map				*mini_map;
 	t_player			*plr;
 	t_ray				*ray;
 	t_pic				**texture;
@@ -191,7 +193,6 @@ void					valid_input(int argc, char **argv, t_cub *cub);
 
 void					parce_ident(t_list **file_lst, t_cub *cub);
 void					resolution(char *ident, t_cub *cub);
-void					color(char *ident, t_cub *cub);
 void					texture(char *ident, t_cub *cub);
 
 void					parce_map(t_list **file, t_cub *cub);
@@ -222,5 +223,6 @@ void					ver_line_texture_pic(t_line *line, t_cub *cub,
 int						create_bitmap(t_pic *img, char *name);
 int						event_destroy_window(void *param);
 void ver_floor_and_cell(t_line *line, t_cub *cub, t_ray *ray);
+void init_mini_map(t_cub *cub);
 
 #endif

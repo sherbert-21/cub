@@ -1,11 +1,11 @@
-R 12345678 12345678
+R 400 400
 NO         ./textures/north.xpm
      SO ./textures/south.xpm
 
-   F 96,96,96
+   F ./textures/south.xpm
 
 
-C 123,25,61
+C ./textures/south.xpm
 
 WE ./textures/west.xpm
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ident_parce.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:25:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:55:59 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/25 01:11:12 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,6 @@ static void	set_ident(char *ident_str, t_cub *cub)
 	{
 		ft_putstr_fd("\t\t\t\tResolution:", 1);
 		resolution(++ident_str, cub);
-	}
-	else if (*ident_str == 'F' || *ident_str == 'C')
-	{
-		if (*ident_str == 'C')
-			ft_putstr_fd("\t\t\t\tColor of celling:", 1);
-		else
-			ft_putstr_fd("\t\t\t\tColor of floor:", 1);
-		color(ident_str, cub);
 	}
 	else
 		texture(ident_str, cub);

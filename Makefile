@@ -2,7 +2,7 @@ NAME	= 	cub3d
 
 FLAGS	= 	-Wall -Werror -Wextra -g -fsanitize=address
 
-SRC		= 	src/parce/identifiers/color.c \
+SRC		= 	\
             src/parce/identifiers/ident_parce.c \
             src/parce/identifiers/resolution.c \
             src/parce/identifiers/texture.c \
@@ -28,8 +28,6 @@ SRC		= 	src/parce/identifiers/color.c \
 
 OBJ		= 	$(SRC:.c=.o)
 
-OBJ_DIR	= 	./obj
-
 INC		= -I ./include -I ./libft -I ./mlx
 
 LIBFT	=	-L ./libft -lft
@@ -42,7 +40,7 @@ lft:
 	make -C ./libft
 	make -C ./mlx
 
-$(NAME): lft $(OBJ)
+$(NAME): $(OBJ) lft
 	gcc $(FLAGS) $(INC) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
 
 clean:

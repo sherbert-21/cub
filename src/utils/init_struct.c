@@ -3,14 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:55:22 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:19:15 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/25 01:38:18 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
+
+void	init_mini_map(t_cub *cub)
+{
+	int	i;
+
+	cub->mini_map = malloc(sizeof(t_map));
+	if (!cub->map)
+		err_exit(2);
+	ft_bzero(cub->mini_map, sizeof(t_map));
+	i = 0;
+	if (cub->map_x < cub->map_y)
+	{
+		while (i * cub->map_x < cub->width / 100 * 10)
+			i++;
+	}
+	else
+	{
+		while (i * cub->map_y < cub->height / 100 * 10)
+			i++;
+	}
+	cub->mini_map->height = cub->map_y * i;
+	cub->mini_map->width = cub->map_x * i;
+}
 
 void	init_texture(t_cub *cub, int nbr)
 {

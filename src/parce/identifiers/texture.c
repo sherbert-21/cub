@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   texture.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:28:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/05 14:45:40 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/25 01:20:04 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,10 @@ static int	num_of_texture(char *ident, int i)
 		ch = 2;
 	if (ident[i] == 'E' && ident[i + 1] == 'A')
 		ch = 3;
-	// if (ident[i] == 'C' && ident[i + 1] == ' ')
-	// 	ch = 5;
-	// if (ident[i] == 'F' && ident[i + 1] == ' ')
-	// 	ch = 6;
+	if (ident[i] == 'C' && ident[i + 1] == ' ')
+		ch = 6;
+	if (ident[i] == 'F' && ident[i + 1] == ' ')
+		ch = 5;
 	if (ident[i] == 'S' && ident[i + 1] == ' ')
 		ch = 4;
 	return (ch);
@@ -111,6 +111,10 @@ void	texture(char *ident, t_cub *cub)
 		ft_putstr_fd("\t\t\t\tWest texture:", 1);
 	else if (ident[i] == 'E' && ident[i + 1] == 'A')
 		ft_putstr_fd("\t\t\t\tEast texture:", 1);
+	else if (ident[i] == 'F' && ident[i + 1] == ' ')
+		ft_putstr_fd("\t\t\t\tFloor texture:", 1);
+	else if (ident[i] == 'C' && ident[i + 1] == ' ')
+		ft_putstr_fd("\t\t\t\tCelling texture:", 1);
 	else
 		ft_putstr_fd("\t\t\t\tSprite texture:", 1);
 	num = num_of_texture(ident, i);
