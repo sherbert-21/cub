@@ -15,6 +15,7 @@ SRC		= 	\
             src/screen/raycasting.c \
             src/screen/screen.c \
             src/screen/texturisation.c \
+            src/screen/mini_map.c \
             src/utils/move.c \
             src/utils/turn.c \
             src/screen/sprite.c \

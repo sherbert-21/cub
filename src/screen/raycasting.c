@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:13 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/14 17:07:56 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:28:22 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ static void	init_values(t_ray *ray, t_player *plr, t_cub *cub)
 	ray->delta_dist_x = fabs(1 / ray->dir_x);
 	ray->delta_dist_y = fabs(1 / ray->dir_y);
 	ray->hit = 0;
+	// cub->mini_map->map[(int)plr->pos_y][(int)plr->pos_x] = 15;
 }
 
 static void	raycasting(t_cub *cub, t_ray *ray)
@@ -78,6 +79,7 @@ int	ray(t_cub *cub)
 		err_exit(2);
 	raycasting(cub, ray);
 	draw_sprite(ray, cub);
+	// draw_map(cub, cub->mini_map);
 	if (cub->save_bmp == 1)
 	{
 		create_bitmap(cub->screen, "cub3D.bmp");

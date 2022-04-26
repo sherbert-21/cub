@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:55:22 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/25 01:38:18 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:21:18 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	init_mini_map(t_cub *cub)
 	int	i;
 
 	cub->mini_map = malloc(sizeof(t_map));
-	if (!cub->map)
+	if (!cub->mini_map)
 		err_exit(2);
 	ft_bzero(cub->mini_map, sizeof(t_map));
 	i = 0;

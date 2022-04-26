@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/25 01:38:14 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:28:05 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@
 # define W 13
 # define _LEFT 123
 # define _RIGHT 124
+
+# define BLACK 2
+# define WHITE 13
+# define RED 123
+# define BLUE 124
 
 # define ERR 0
 # define SUCCESS 1
@@ -222,7 +227,8 @@ void					ver_line_texture_pic(t_line *line, t_cub *cub,
 
 int						create_bitmap(t_pic *img, char *name);
 int						event_destroy_window(void *param);
-void ver_floor_and_cell(t_line *line, t_cub *cub, t_ray *ray);
-void init_mini_map(t_cub *cub);
+void	ver_floor_and_cell(t_line *line, t_cub *cub, t_ray *ray);
+void	init_mini_map(t_cub *cub);
+void	draw_map(t_cub *cub, t_map *map);
 
 #endif

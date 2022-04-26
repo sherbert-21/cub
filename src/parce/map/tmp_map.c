@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:01:24 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:31:55 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:21:36 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	**file_into_map(t_list *file, t_cub *cub)
 
 	y = -1;
 	width_and_heigth_of_map(file, cub);
+	init_mini_map(cub);
 	tmp = ft_calloc(cub->map_y + 1, sizeof(char *));
 	if (!tmp)
 		err_exit(2);

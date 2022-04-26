@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 16:16:45 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/25 01:38:54 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:17:58 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	main(int argc, char **argv)
 	init_plr(cub);
 	init_game_sprite(cub);
 	init_game_keybuffer(cub);
-	init_mini_map(cub);
 	file_parce(argc, argv, cub);
 	cub->screen = new_pic(cub, cub->width, cub->height);
 	if (cub->save_bmp == 1)
