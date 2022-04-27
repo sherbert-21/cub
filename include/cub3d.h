@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/26 16:28:05 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:53:12 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 # define _LEFT 123
 # define _RIGHT 124
 
-# define BLACK 2
-# define WHITE 13
-# define RED 123
-# define BLUE 124
+# define BLACK 0
+# define WHITE 16777215
+# define RED 16711680
+# define BLUE 255
 
 # define ERR 0
 # define SUCCESS 1
@@ -54,6 +54,10 @@ typedef struct			s_map
 {
 	int					width;
 	int					height;
+
+	int					step_x;
+	int					step_y;
+	int					pix;
 
 	int					**map;
 }	t_map;

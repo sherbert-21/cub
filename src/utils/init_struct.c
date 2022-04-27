@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:55:22 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/26 15:21:18 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:59:22 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ void	init_mini_map(t_cub *cub)
 	}
 	cub->mini_map->height = cub->map_y * i;
 	cub->mini_map->width = cub->map_x * i;
+	cub->mini_map->pix = i;
+	cub->mini_map->step_x = 0;
+	cub->mini_map->step_y = 0;
 }
 
 void	init_texture(t_cub *cub, int nbr)

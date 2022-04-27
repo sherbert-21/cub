@@ -3,39 +3,66 @@
 /*                                                        :::      ::::::::   */
 /*   mini_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:29:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/26 16:27:32 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/04/27 23:05:31 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "../../include/cub3d.h"
+#include "../../include/cub3d.h"
 
-// static void    fill_map(t_cub *cub, int x, int y, int color)
-// {
-    
-// }
+static void	draw_sqaure(t_cub *cub, int x, int y, unsigned int color)
+{
+	int i;
+	int	j;
+	int step_x;
+	int step_y;
 
-// void    draw_map(t_cub *cub, t_map *map)
-// {
-//     int x;
-//     int y;
+	i = -1;
+	step_x = cub->mini_map->step_x;
+	step_y = cub->mini_map->step_y;
+	while (++i <= cub->mini_map->pix)
+	{
+		j = -1;
+		while (++j <= cub->mini_map->pix)
+			cub->screen->data[(i + step_y) * cub->screen->width + (j + step_x)] = color;
+	}
+}
+
+static unsigned int    set_color(int x, int y, t_map *map)
+{
+	unsigned int color;
+
+	if (map->map[y][x] == 0)
+        color = BLACK;
+    else if (map->map[y][x] == 15)
+        color = RED;
+    else if (map->map[y][x] == 1)
+        color = WHITE;
+    else
+        color = BLUE;
+	return (color);
+}
+
+void    draw_map(t_cub *cub, t_map *map)
+{
+    int x;
+    int y;
+	unsigned int color;
     
-//     y = -1;
-//     while (++y < cub->map_y)
-//     {
-//         x = -1;
-//         while (++x < cub->map_x)
-//         {
-//             if (map->map[y][x] == 0)
-//                 fill_map(cub, x, y, black);
-//             if (map->map[y][x] == 15)
-//                 fill_map(cub, x, y, red);
-//             else if (map->map[y][x] == 1)
-//                 fill_map(cub, x, y, white);
-//             else if (map->map[y][x] == 2)
-//                 fill_map(cub, x, y, blue);
-//         }
-//     }
-// }
+    y = -1;
+	map->step_y = 0;
+    while (++y < cub->map_y)
+    {
+        x = -1;
+		map->step_x = 0;
+        while (++x < cub->map_x)
+        {
+            color = set_color(x, y, map);
+			draw_sqaure(cub, x, y, color);
+			map->step_x += map->pix + 1;
+        }
+		map->step_y += map->pix + 1;
+    }
+}
