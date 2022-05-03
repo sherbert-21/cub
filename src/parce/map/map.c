@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:03:19 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/26 15:27:03 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 17:45:10 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	symbol_int_map(char ch, int x, int y, t_cub *cub)
 	else if (ch == ' ')
 		cub->mini_map->map[y][x] = 0;
 	else if (ft_strchr("NSWE", ch))
-		cub->mini_map->map[y][x] = 15;
+		cub->mini_map->map[y][x] = 0;
 }
 
 static void	symbol_int(char ch, int x, int y, t_cub *cub)

@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:29:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/27 23:05:31 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 18:29:19 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ static void	draw_sqaure(t_cub *cub, int x, int y, unsigned int color)
 	}
 }
 
-static unsigned int    set_color(int x, int y, t_map *map)
+static unsigned int    set_color(int x, int y, t_map *map, t_cub *cub)
 {
 	unsigned int color;
 
-	if (map->map[y][x] == 0)
+	if (y == (int)cub->plr->pos_x && x == (int)cub->plr->pos_y && map->map[y][x] == 0)
+		color = RED;
+	else if (map->map[y][x] == 0)
         color = BLACK;
-    else if (map->map[y][x] == 15)
-        color = RED;
     else if (map->map[y][x] == 1)
         color = WHITE;
     else
@@ -59,7 +59,7 @@ void    draw_map(t_cub *cub, t_map *map)
 		map->step_x = 0;
         while (++x < cub->map_x)
         {
-            color = set_color(x, y, map);
+            color = set_color(x, y, map, cub);
 			draw_sqaure(cub, x, y, color);
 			map->step_x += map->pix + 1;
         }
