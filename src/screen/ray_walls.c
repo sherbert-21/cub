@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray_walls.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:34:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:27:00 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 22:15:11 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,9 @@ void	hit(t_ray *ray, t_cub *cub)
 	while (ray->hit == 0)
 	{
 		predict_wall_face(ray);
-		if (cub->map[ray->map_x][ray->map_y] > 0 &&
-		cub->map[ray->map_x][ray->map_y] != 2)
+		if (cub->map[ray->map_y][ray->map_x] == 1)
 			ray->hit = 1;
-		else if (cub->map[ray->map_x][ray->map_y] == 2)
-			is_sprite(ray, cub);
+		// else if (cub->map[ray->map_y][ray->map_x] == 2)
+		// 	is_sprite(ray, cub);
 	}
 }

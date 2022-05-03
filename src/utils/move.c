@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:02 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:28:11 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 22:08:37 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,41 @@
 
 static void	left(t_cub *cub)
 {
-	if (cub->map[(int)(cub->plr->pos_x - cub->plr->plane_x
-			* cub->plr->speed)][(int)cub->plr->pos_y] == 0)
+	if (cub->map[(int)cub->plr->pos_y][(int)(cub->plr->pos_x - cub->plr->plane_x
+			* cub->plr->speed)] == 0)
 		cub->plr->pos_x -= cub->plr->plane_x * cub->plr->speed;
-	if (cub->map[(int)cub->plr->pos_x][(int)(cub->plr->pos_y
-		- cub->plr->plane_y * cub->plr->speed)] == 0)
+	if (cub->map[(int)(cub->plr->pos_y \
+		- cub->plr->plane_y * cub->plr->speed)][(int)cub->plr->pos_x] == 0)
 		cub->plr->pos_y -= cub->plr->plane_y * cub->plr->speed;
 }
 
 static void	right(t_cub *cub)
 {
-	if (cub->map[(int)(cub->plr->pos_x + cub->plr->plane_x * \
-			cub->plr->speed)][(int)cub->plr->pos_y] == 0)
+	if (cub->map[(int)cub->plr->pos_y][(int)(cub->plr->pos_x + cub->plr->plane_x * \
+			cub->plr->speed)] == 0)
 		cub->plr->pos_x += cub->plr->plane_x * cub->plr->speed;
-	if (cub->map[(int)cub->plr->pos_x][(int)(cub->plr->pos_y + \
-			cub->plr->plane_y * cub->plr->speed)] == 0)
+	if (cub->map[(int)(cub->plr->pos_y + \
+			cub->plr->plane_y * cub->plr->speed)][(int)cub->plr->pos_x] == 0)
 		cub->plr->pos_y += cub->plr->plane_y * cub->plr->speed;
 }
 
 static void	forward(t_cub *cub)
 {
-	if (cub->map[(int)(cub->plr->pos_x + cub->plr->dir_x
-			* cub->plr->speed)][(int)cub->plr->pos_y] == 0)
+	if (cub->map[(int)cub->plr->pos_y][(int)(cub->plr->pos_x + cub->plr->dir_x
+			* cub->plr->speed)] == 0)
 		cub->plr->pos_x += cub->plr->dir_x * cub->plr->speed;
-	if (cub->map[(int)cub->plr->pos_x][(int)(cub->plr->pos_y
-		+ cub->plr->dir_y * cub->plr->speed)] == 0)
+	if (cub->map[(int)(cub->plr->pos_y \
+		+ cub->plr->dir_y * cub->plr->speed)][(int)cub->plr->pos_x] == 0)
 		cub->plr->pos_y += cub->plr->dir_y * cub->plr->speed;
 }
 
 static void	backward(t_cub *cub)
 {
-	if (cub->map[(int)(cub->plr->pos_x - cub->plr->dir_x
-			* cub->plr->speed)][(int)cub->plr->pos_y] == 0)
+	if (cub->map[(int)cub->plr->pos_y][(int)(cub->plr->pos_x - cub->plr->dir_x
+			* cub->plr->speed)] == 0)
 		cub->plr->pos_x -= cub->plr->dir_x * cub->plr->speed;
-	if (cub->map[(int)cub->plr->pos_x][(int)(cub->plr->pos_y
-		- cub->plr->dir_y * cub->plr->speed)] == 0)
+	if (cub->map[(int)(cub->plr->pos_y
+		- cub->plr->dir_y * cub->plr->speed)][(int)cub->plr->pos_x] == 0)
 		cub->plr->pos_y -= cub->plr->dir_y * cub->plr->speed;
 }
 

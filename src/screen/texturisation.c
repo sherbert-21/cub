@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/24 17:01:12 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 21:55:25 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	texturisation(t_ray *ray, t_cub *cub)
 	else
 		wall_x = cub->plr->pos_x + ray->perp_wall_dist * ray->dir_x;
 	wall_x -= floor(wall_x);
-	if (cub->map[ray->map_x][ray->map_y] == 1)
+	if (cub->map[ray->map_y][ray->map_x] == 1)
 		determine_side_draw(ray, cub, line, wall_x);
 	draw_floor(ray, cub, line, wall_x);
 	if (ray->draw_end < 0)

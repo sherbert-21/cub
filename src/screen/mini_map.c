@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:29:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 18:29:19 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 22:09:35 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static unsigned int    set_color(int x, int y, t_map *map, t_cub *cub)
 {
 	unsigned int color;
 
-	if (y == (int)cub->plr->pos_x && x == (int)cub->plr->pos_y && map->map[y][x] == 0)
+	if (y == (int)cub->plr->pos_y && x == (int)cub->plr->pos_x && map->map[y][x] == 0)
 		color = RED;
 	else if (map->map[y][x] == 0)
         color = BLACK;

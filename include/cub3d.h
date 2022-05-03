@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 18:20:18 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 21:37:37 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,14 +134,8 @@ typedef struct			s_sprite
 {
 	int					x;
 	int					y;
+	int					distance;
 }						t_sprite;
-
-typedef struct			s_sprites
-{
-	int					x;
-	int					y;
-	struct s_sprites	*next;
-}						t_sprites;
 
 typedef struct			s_draw_sprite
 {
@@ -181,12 +175,15 @@ typedef struct			s_cub
 
 	int					save_bmp;
 
+	int					sprites_num;
+	int					sprite_i;
+
 	t_map				*mini_map;
+	t_sprite			*sprite_order;
 	t_player			*plr;
 	t_ray				*ray;
 	t_pic				**texture;
 	t_pic				*screen;
-	t_sprites			*sprites_on_screen;
 	t_keybuffer			*keybuffer;
 }						t_cub;
 

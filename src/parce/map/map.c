@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:03:19 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 17:45:10 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 21:52:29 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 static void	symbol_int_map(char ch, int x, int y, t_cub *cub)
 {
 	if (ch >= '0' && ch <= '2')
+	{
 		cub->mini_map->map[y][x] = ch - '0';
+		if (ch == '2')
+			cub->sprites_num++;
+	}
 	else if (ch == ' ')
 		cub->mini_map->map[y][x] = 0;
 	else if (ft_strchr("NSWE", ch))
@@ -60,6 +64,7 @@ static void	char_to_int_map(char **map, t_cub *cub)
 
 	y = -1;
 	fill_mini_map(map, cub);
+	init_game_sprite(cub);
 	cub->map = ft_calloc(cub->map_y + 1, sizeof(int *));
 	if (!cub->map)
 		err_exit(2);
@@ -94,7 +99,7 @@ void	parce_map(t_list **file, t_cub *cub)
 			check_symbol(tmp_map, j, k, cub);
 			if (ft_strchr("NSWE", tmp_map[j][k]))
 			{
-				set_dir(tmp_map[j][k], j, k, cub);
+				set_dir(tmp_map[j][k], k, j, cub);
 				plr++;
 			}
 		}

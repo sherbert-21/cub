@@ -6,11 +6,20 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:13 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 18:29:46 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 22:24:19 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
+
+static void	sprite_value(t_cub *cub)
+{
+	int i;
+
+	i = -1;
+	while(++i < cub->sprites_num)
+		cub->sprite_order[i].distance = ((cub->plr->pos_x - cub->sprite_order[i].x) * (cub->plr->pos_x - cub->sprite_order[i].x) + (cub->plr->pos_y - cub->sprite_order[i].y) * (cub->plr->pos_y - cub->sprite_order[i].y));
+}
 
 static void	next_step(t_ray *ray, t_player *plr)
 {
@@ -38,6 +47,9 @@ static void	next_step(t_ray *ray, t_player *plr)
 
 static void	init_values(t_ray *ray, t_player *plr, t_cub *cub)
 {
+	int i;
+
+	i = -1;
 	ray->camera_x = (2 * ray->pix) / (double)cub->width - 1;
 	ray->dir_x = plr->dir_x + plr->plane_x * ray->camera_x;
 	ray->dir_y = plr->dir_y + plr->plane_y * ray->camera_x;
@@ -46,6 +58,7 @@ static void	init_values(t_ray *ray, t_player *plr, t_cub *cub)
 	ray->delta_dist_x = fabs(1 / ray->dir_x);
 	ray->delta_dist_y = fabs(1 / ray->dir_y);
 	ray->hit = 0;
+	sprite_value(cub);
 }
 
 static void	raycasting(t_cub *cub, t_ray *ray)

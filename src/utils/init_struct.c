@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:55:22 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/27 22:59:22 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 22:21:43 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,28 @@ void	init_game_keybuffer(t_cub *cub)
 
 int	init_game_sprite(t_cub *cub)
 {
-	cub->sprites_on_screen = malloc(sizeof(t_list));
-	if (!cub->sprites_on_screen)
+	int i;
+	int k;
+	int j;
+
+	i = 0;
+	cub->sprite_order = ft_calloc(cub->sprites_num + 1, sizeof(t_sprite));
+	if (!cub->sprite_order)
 		err_exit(2);
-	ft_bzero(cub->sprites_on_screen, sizeof(t_list));
-	cub->sprites_on_screen->x = -1;
-	cub->sprites_on_screen->y = -1;
+	k = -1;
+	while(++k < cub->map_y)
+	{
+		j = -1;
+		while(++j < cub->map_x)
+		{
+			if (cub->mini_map->map[k][j] == 2)
+			{
+				cub->sprite_order[i].x = j;
+				cub->sprite_order[i].y = k;
+				cub->sprite_order[i].distance = -1;
+				i++;
+			}
+		}
+	}
 	return (0);
 }

@@ -3,14 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:09:51 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:30:44 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/03 22:49:03 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
+
+static int 	get_i_min(t_sprite *sprites, int num)
+{
+	int min;
+	int i;
+	int min_i;
+
+	i = -1;
+	min = 2147483647;
+	while(++i < num)
+	{
+		if (min > sprites[i].distance)
+		{
+			min_i = i;
+			min = sprites[i].distance;
+		}
+	}
+	return (min_i);
+}
+
+static t_sprite *sort_sprites(t_sprite *sprites, t_cub *cub)
+{
+	t_sprite *new;
+	int i;
+	int j;
+
+	i = -1;
+	new = ft_calloc(cub->sprites_num + 1, sizeof(t_sprite));
+	if (!new)
+		return(NULL);
+	while (++i < cub->sprites_num)
+	{
+		j = get_i_min(sprites, cub->sprites_num);
+		new[i].x = sprites[j].x;
+		new[i].y = sprites[j].y;
+		new[i].distance = sprites[j].distance;
+		sprites[j].distance = 2147483647;
+	}
+	return(new);
+}
 
 static void	calcul_values(t_draw_sprite *ds, t_cub *cub)
 {
@@ -92,8 +132,10 @@ void	draw_sprite(t_ray *ray, t_cub *cub)
 	if (!ds)
 		err_exit(2);
 	ds->i = 0;
-	ds->sprites = list_to_tab(cub);
-	ds->i = ft_lstsize((t_list *)cub->sprites_on_screen);
+	ds->sprites = sort_sprites(cub->sprite_order, cub);
+	if (!ds->sprites)
+		return(err_exit(2));
+	ds->i = cub->sprites_num + 1;
 	while (--ds->i >= 0)
 		make_sprite(ds, cub, ray);
 	free(ds->sprites);
