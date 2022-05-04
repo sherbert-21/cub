@@ -6,11 +6,27 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:29:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 22:09:35 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/04 08:43:06 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
+
+static int	get_color(unsigned int clr1, unsigned int clr2)
+{
+	int	*c1;
+	int	*c2;
+	unsigned int	clr;
+
+	c1 = int_to_rgb(clr1);
+	c2 = int_to_rgb(clr2);
+	c1 = clr_add(c1, c2);
+	c1[0] /= 2;
+	c1[1] /= 2;
+	c1[2] /= 2;
+	clr = rgb_to_int(c1[0], c1[1], c1[2]);
+	return(clr);
+}
 
 static void	draw_sqaure(t_cub *cub, int x, int y, unsigned int color)
 {
@@ -26,7 +42,7 @@ static void	draw_sqaure(t_cub *cub, int x, int y, unsigned int color)
 	{
 		j = -1;
 		while (++j <= cub->mini_map->pix)
-			cub->screen->data[(i + step_y) * cub->screen->width + (j + step_x)] = color;
+			cub->screen->data[(i + step_y) * cub->screen->width + (j + step_x)] = get_color(cub->screen->data[(i + step_y) * cub->screen->width + (j + step_x)], color);
 	}
 }
 

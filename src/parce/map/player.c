@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:04:47 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:47:13 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/04 08:14:48 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,22 @@ static void	set_pos(int x, int y, t_cub *cub)
 
 void	set_dir(char dir, int x, int y, t_cub *cub)
 {
-	if (dir == 'S')
+	if (dir == 'E')
 	{
 		cub->plr->dir_y = 0.0;
 		set_camera(cub, 1.0, 0.0, 0.66);
 	}
-	else if (dir == 'N')
+	else if (dir == 'W')
 	{
 		cub->plr->dir_y = 0.0;
 		set_camera(cub, -1.0, 0.0, -0.66);
 	}
-	else if (dir == 'E')
+	else if (dir == 'N')
 	{
 		cub->plr->dir_y = -1.0;
 		set_camera(cub, 0.0, 0.66, 0.0);
 	}
-	else if (dir == 'W')
+	else if (dir == 'S')
 	{
 		cub->plr->dir_y = 1.0;
 		set_camera(cub, 0.0, -0.66, 0.0);

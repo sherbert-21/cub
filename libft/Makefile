@@ -6,7 +6,7 @@
 #    By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/07 19:44:28 by sherbert          #+#    #+#              #
-#    Updated: 2020/10/27 16:15:29 by sherbert         ###   ########.fr        #
+#    Updated: 2022/05/04 08:44:09 by sherbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ ft_lstclear.c \
 ft_lstiter.c \
 ft_lstmap.c \
 gnl.c \
+ft_rgb.c \
 utils_gnl.c
 
 
@@ -76,6 +77,7 @@ $(NAME): $(OBJ)
 
 clean:
 	/bin/rm -f $(OBJ)
+	/bin/rm -f *.o
 
 fclean: clean
 	/bin/rm -f $(NAME)
