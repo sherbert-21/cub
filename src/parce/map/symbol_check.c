@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:06:01 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 22:01:11 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 17:01:34 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,6 @@ void	check_symbol(char **tmp, int j, int k, t_cub *cub)
 			!(ft_strchr(" 1", tmp[j][k - 1])))
 			err_exit(9);
 	}
-	else if (!(ft_strchr("012NSWE", tmp[j][k])))
+	else if (!(ft_strchr("0123NSWE", tmp[j][k])))
 		err_exit(10);
 }

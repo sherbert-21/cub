@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 16:16:45 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/05 15:57:43 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:54:27 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 	t_cub	*cub;
 
 	cub = init_cub();
-	init_texture(cub, 7);
+	init_texture(cub, 8);
 	init_plr(cub);
 	init_game_keybuffer(cub);
 	file_parce(argc, argv, cub);

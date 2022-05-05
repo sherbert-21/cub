@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:03:19 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 21:52:29 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 17:05:31 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/cub3d.h"
-#include <stdio.h>
 
 static void	symbol_int_map(char ch, int x, int y, t_cub *cub)
 {
-	if (ch >= '0' && ch <= '2')
+	if (ch >= '0' && ch <= '3')
 	{
 		cub->mini_map->map[y][x] = ch - '0';
 		if (ch == '2')
@@ -29,7 +28,7 @@ static void	symbol_int_map(char ch, int x, int y, t_cub *cub)
 
 static void	symbol_int(char ch, int x, int y, t_cub *cub)
 {
-	if (ch >= '0' && ch <= '2')
+	if (ch >= '0' && ch <= '3')
 		cub->map[y][x] = ch - '0';
 	else if (ch == ' ')
 		cub->map[y][x] = 1;
@@ -65,6 +64,7 @@ static void	char_to_int_map(char **map, t_cub *cub)
 	y = -1;
 	fill_mini_map(map, cub);
 	init_game_sprite(cub);
+	init_doors(map, cub);
 	cub->map = ft_calloc(cub->map_y + 1, sizeof(int *));
 	if (!cub->map)
 		err_exit(2);

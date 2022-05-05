@@ -10,6 +10,7 @@ SRC		= 	\
             src/parce/map/symbol_check.c \
             src/parce/map/tmp_map.c \
             src/parce/map/player.c \
+            src/parce/map/doors_init.c \
             src/parce/file_parce.c \
             src/parce/valid_input.c \
             src/screen/raycasting.c \

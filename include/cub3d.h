@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/05 15:49:50 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 17:31:42 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@
 typedef struct 			s_door
 {
 	int					close;
-	
+	int					x; // if close = x, if open = x + 1
+	int					y; // like before
 } t_door;
 
 
@@ -191,6 +192,7 @@ typedef struct			s_cub
 	t_ray				*ray;
 	t_pic				**texture;
 	t_pic				*screen;
+	t_door				*doors;
 	t_keybuffer			*keybuffer;
 }						t_cub;
 
@@ -198,7 +200,7 @@ void					err_exit(int err_code);
 void					init_texture(t_cub *cub, int nbr);
 void					init_plr(t_cub *cub);
 void					init_game_keybuffer(t_cub *cub);
-int						init_game_sprite(t_cub *cub);
+void					init_game_sprite(t_cub *cub);
 t_pic					*new_pic(t_cub *cub, int x_len, int y_len);
 
 void					file_parce(int argc, char **argv, t_cub *cub);
@@ -238,5 +240,6 @@ int						event_destroy_window(void *param);
 void	ver_floor_and_cell(t_line *line, t_cub *cub, t_ray *ray);
 void	init_mini_map(t_cub *cub);
 void	draw_map(t_cub *cub, t_map *map);
+void    init_doors(char **map, t_cub *cub);
 
 #endif

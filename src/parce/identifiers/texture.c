@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:28:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/05 15:57:33 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 17:00:18 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,8 @@ static int	num_of_texture(char *ident, int i)
 		ch = 5;
 	if (ident[i] == 'S' && ident[i + 1] == ' ')
 		ch = 4;
-	// if (ident[i] == 'D' && ident[i + 1] == ' ')
-	// 	ch = 7;
+	if (ident[i] == 'D' && ident[i + 1] == ' ')
+		ch = 7;
 	return (ch);
 }
 
@@ -116,7 +116,9 @@ void	texture(char *ident, t_cub *cub)
 	else if (ident[i] == 'F' && ident[i + 1] == ' ')
 		ft_putstr_fd("\t\t\t\tFloor texture:", 1);
 	else if (ident[i] == 'C' && ident[i + 1] == ' ')
-		ft_putstr_fd("\t\t\t\tCelling texture:", 1);
+		ft_putstr_fd("\t\t\t\tCell texture:", 1);
+	else if (ident[i] == 'D' && ident[i + 1] == ' ')
+		ft_putstr_fd("\t\t\t\tDoor texture:", 1);
 	else
 		ft_putstr_fd("\t\t\t\tSprite texture:", 1);
 	num = num_of_texture(ident, i);

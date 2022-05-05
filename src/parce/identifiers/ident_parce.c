@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ident_parce.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:25:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/25 01:11:12 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 16:57:25 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	ident_check(char *ident_str, t_cub *cub)
 		i++;
 	if (ident_str[i] == '\n' || ident_str[i] == '\0')
 		return (NEXT);
-	else if (ft_strchr("RSFC", ident_str[i]) && ident_str[i + 1] == ' ')
+	else if (ft_strchr("RSFCD", ident_str[i]) && ident_str[i + 1] == ' ')
 		return (SUCCESS);
 	else if (ft_strchr("SN", ident_str[i]) && ident_str[i + 1] == 'O')
 		return (SUCCESS);
@@ -81,7 +81,7 @@ void	parce_ident(t_list **file_lst, t_cub *cub)
 	char	*file;
 
 	ident = 0;
-	while (ident != 8 && *file_lst)
+	while (ident != 9 && *file_lst)
 	{
 		file = ft_strdup((*file_lst)->content);
 		if (!file)
@@ -96,7 +96,7 @@ void	parce_ident(t_list **file_lst, t_cub *cub)
 		*file_lst = (*file_lst)->next;
 	}
 	ft_putstr_fd("\n\t", 1);
-	if (ident != 8)
+	if (ident != 9)
 		err_exit(3);
 	skip_space(file_lst, cub);
 	if (!(*file_lst) && ident == 8)

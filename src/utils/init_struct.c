@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:55:22 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 22:21:43 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 18:25:59 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	init_game_keybuffer(t_cub *cub)
 	cub->keybuffer->turn_right = 0;
 }
 
-int	init_game_sprite(t_cub *cub)
+void	init_game_sprite(t_cub *cub)
 {
 	int i;
 	int k;
@@ -112,5 +112,4 @@ int	init_game_sprite(t_cub *cub)
 			}
 		}
 	}
-	return (0);
 }
