@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   texture.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:28:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/25 01:20:04 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 15:57:33 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,8 @@ static int	num_of_texture(char *ident, int i)
 		ch = 5;
 	if (ident[i] == 'S' && ident[i + 1] == ' ')
 		ch = 4;
+	// if (ident[i] == 'D' && ident[i + 1] == ' ')
+	// 	ch = 7;
 	return (ch);
 }
 

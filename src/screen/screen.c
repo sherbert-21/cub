@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   screen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/24 17:03:59 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/05 15:58:32 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,25 +88,15 @@ void ver_floor_and_cell(t_line *line, t_cub *cub, t_ray *ray)
 		current_floor_x = weight * ray->floor_x_wall + (1.0 - weight) * cub->plr->pos_x;
 		current_floor_y = weight * ray->floor_y_wall + (1.0 - weight) * cub->plr->pos_y;
 
-		// line->tex_x = (int)(current_floor_x * cub->texture[5]->width) % cub->texture[5]->width;
-		// line->tex_y = (int)(current_floor_y * cub->texture[5]->height) % cub->texture[5]->height;
+		line->tex_x = (int)(current_floor_x * cub->texture[5]->width) % cub->texture[5]->width;
+		line->tex_y = (int)(current_floor_y * cub->texture[5]->height) % cub->texture[5]->height;
 
-		// cub->screen->data[line->y * cub->screen->width + line->x] = cub->texture[5]->data[cub->texture[5]->width * line->tex_y + line->tex_x];
+		cub->screen->data[line->y * cub->screen->width + line->x] = cub->texture[5]->data[cub->texture[5]->width * line->tex_y + line->tex_x];
 		
-		// line->tex_x = (int)(current_floor_x * cub->texture[6]->width) % cub->texture[6]->width;
-		// line->tex_y = (int)(current_floor_y * cub->texture[6]->height) % cub->texture[6]->height;
+		line->tex_x = (int)(current_floor_x * cub->texture[6]->width) % cub->texture[6]->width;
+		line->tex_y = (int)(current_floor_y * cub->texture[6]->height) % cub->texture[6]->height;
 
-		// cub->screen->data[(cub->height - line->y) * cub->screen->width + line->x] = cub->texture[6]->data[cub->texture[6]->width * line->tex_y + line->tex_x];
-		// line->y++;
-		line->tex_x = (int)(current_floor_x * cub->texture[1]->width) % cub->texture[1]->width;
-		line->tex_y = (int)(current_floor_y * cub->texture[1]->height) % cub->texture[1]->height;
-
-		cub->screen->data[line->y * cub->screen->width + line->x] = cub->texture[1]->data[cub->texture[1]->width * line->tex_y + line->tex_x];
-		
-		line->tex_x = (int)(current_floor_x * cub->texture[1]->width) % cub->texture[1]->width;
-		line->tex_y = (int)(current_floor_y * cub->texture[1]->height) % cub->texture[1]->height;
-
-		cub->screen->data[(cub->height - line->y) * cub->screen->width + line->x] = cub->texture[1]->data[cub->texture[1]->width * line->tex_y + line->tex_x];
+		cub->screen->data[(cub->height - line->y) * cub->screen->width + line->x] = cub->texture[6]->data[cub->texture[6]->width * line->tex_y + line->tex_x];
 		line->y++;
 	}
 }

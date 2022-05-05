@@ -18,7 +18,6 @@ SRC		= 	\
             src/screen/mini_map.c \
             src/utils/move.c \
             src/utils/turn.c \
-            src/screen/sprite.c \
             src/screen/draw_sprite.c \
             src/screen/ray_walls.c \
             src/utils/err_exit.c \

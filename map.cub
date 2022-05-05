@@ -1,17 +1,16 @@
 R 700 700
-NO         ./textures/north.xpm
-     SO ./textures/south.xpm
+NO         ./textures/walls/wall1.xpm
+     SO ./textures/walls/wall1.xpm
 
-   F ./textures/south.xpm
+   F ./textures/walls/stone1.xpm
 
 
-C ./textures/south.xpm
+C ./textures/walls/stone1.xpm
 
-WE ./textures/west.xpm
+WE ./textures/walls/wall1.xpm
 
-EA ./textures/east.xpm
-S ./textures/barrel.xpm
-
+EA ./textures/walls/wall1.xpm
+S ./textures/sprites/table3.xpm
 
 
         1111111111111111111111111
