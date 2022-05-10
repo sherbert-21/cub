@@ -1,0 +1,29 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/matt/Documents/GIT/ECOLE42/cub'
+cc    -c -o src/parce/identifiers/ident_parce.o src/parce/identifiers/ident_parce.c
+cc    -c -o src/parce/identifiers/resolution.o src/parce/identifiers/resolution.c
+cc    -c -o src/parce/identifiers/texture.o src/parce/identifiers/texture.c
+cc    -c -o src/parce/map/map.o src/parce/map/map.c
+cc    -c -o src/parce/map/symbol_check.o src/parce/map/symbol_check.c
+cc    -c -o src/parce/map/tmp_map.o src/parce/map/tmp_map.c
+cc    -c -o src/parce/map/player.o src/parce/map/player.c
+cc    -c -o src/parce/file_parce.o src/parce/file_parce.c
+cc    -c -o src/parce/valid_input.o src/parce/valid_input.c
+cc    -c -o src/screen/raycasting.o src/screen/raycasting.c
+cc    -c -o src/screen/screen.o src/screen/screen.c
+cc    -c -o src/screen/texturisation.o src/screen/texturisation.c
+cc    -c -o src/screen/mini_map.o src/screen/mini_map.c
+cc    -c -o src/utils/move.o src/utils/move.c
+cc    -c -o src/utils/turn.o src/utils/turn.c
+cc    -c -o src/screen/draw_sprite.o src/screen/draw_sprite.c
+cc    -c -o src/screen/ray_walls.o src/screen/ray_walls.c
+cc    -c -o src/utils/err_exit.o src/utils/err_exit.c
+cc    -c -o src/utils/init_struct.o src/utils/init_struct.c
+cc    -c -o src/utils/bmp.o src/utils/bmp.c
+cc    -c -o src/utils/manage.o src/utils/manage.c
+cc    -c -o cub3d.o cub3d.c
+make -C ./libft
+make -C ./mlx
+gcc -Wall -Werror -Wextra -g -fsanitize=address -I ./include -I ./libft -I ./mlx src/parce/identifiers/ident_parce.o src/parce/identifiers/resolution.o src/parce/identifiers/texture.o src/parce/map/map.o src/parce/map/symbol_check.o src/parce/map/tmp_map.o src/parce/map/player.o src/parce/file_parce.o src/parce/valid_input.o src/screen/raycasting.o src/screen/screen.o src/screen/texturisation.o src/screen/mini_map.o src/utils/move.o src/utils/turn.o src/screen/draw_sprite.o src/screen/ray_walls.o src/utils/err_exit.o src/utils/init_struct.o src/utils/bmp.o src/utils/manage.o cub3d.o -L ./libft -lft -L ./mlx -lmlx -framework OpenGL -framework AppKit -o cub3d
+make: Leaving directory '/home/matt/Documents/GIT/ECOLE42/cub'
+ 

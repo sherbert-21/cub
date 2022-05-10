@@ -1,0 +1,533 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'src/parce/identifiers/ident_parce.o', needed by 'cub3d'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue May 10 10:23:07 2022
+
+# Variables
+
+# makefile (from 'Makefile', line 29)
+OBJ = $(SRC:.c=.o)
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 5)
+SRC = src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c cub3d.c
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ad47a1c9-f44e-405c-977f-fbab6cda40ad.sock
+# environment
+KONSOLE_DBUS_SERVICE = :1.62
+# environment
+LC_NAME = ru_RU.UTF-8
+# environment
+LC_NUMERIC = ru_RU.UTF-8
+# environment
+VSCODE_CWD = /home/matt/Documents/GIT/ECOLE42/cub
+# environment
+FZF_CTRL_T_OPTS = --preview 'command bat --color=always --line-range :500 {}' 
+# environment
+WINDOWID = 106954759
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+LC_ADDRESS = ru_RU.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+GOPATH = /home/matt/Documents/GIT/go
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+KONSOLE_VERSION = 220400
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/matt/Documents/GIT/ECOLE42/cub
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/matt
+# environment
+OLDPWD = /home/matt/Documents/GIT
+# environment
+KONSOLE_DBUS_WINDOW = /Windows/1
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/matt/.config/Code - OSS/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# makefile (from 'Makefile', line 33)
+LIBFT = -L ./libft -lft
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/matt/.Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [1;31m
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+COLORFGBG = 15;0
+# makefile
+MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [7m
+# environment
+ANDROID_NDK_HOME = /opt/android-ndk
+# makefile
+CURDIR := /home/matt/Documents/GIT/ECOLE42/cub
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXKylKX5/agent.3112
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /home/matt/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = Dracula-cursors
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 5004
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+CUDA_PATH = /opt/cuda
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+FZF_DEFAULT_COMMAND = command rg -uu -g '!.git' --files
+# makefile (from 'Makefile', line 3)
+FLAGS = -Wall -Werror -Wextra -g -fsanitize=address
+# environment
+SESSION_MANAGER = local/mattartix:@/tmp/.ICE-unix/1546,unix/mattartix:/tmp/.ICE-unix/1546
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = gtk
+# environment
+CHROME_DESKTOP = code-oss.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-F1RnvF2Tg8,guid=e11f744317735cca265c8969627a0a06
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# environment
+ANDROID_NDK = /opt/android-ndk
+# environment
+PROFILEHOME = /home/matt
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/go/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/bin:/home/matt/Documents/GIT/go/bin
+# environment
+LESS_TERMCAP_se = [27m
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = 
+# environment
+LC_MONETARY = ru_RU.UTF-8
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = ru_RU.UTF-8
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+GOBIN = /home/matt/Documents/GIT/go/bin
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 35)
+MLX = -L ./mlx -lmlx -framework OpenGL -framework AppKit
+# environment
+LC_TELEPHONE = ru_RU.UTF-8
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# makefile (from 'Makefile', line 31)
+INC = -I ./include -I ./libft -I ./mlx
+# makefile (from 'Makefile', line 1)
+NAME = cub3d
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# environment
+LS_COLORS = di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+GREP_COLOR = 37;45
+# environment
+GREP_COLORS = mt=37;45
+# environment
+LOGNAME = matt
+# environment
+FZF_CTRL_T_COMMAND = command rg -uu -g '!.git' --files
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = matt
+# default
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# environment
+KONSOLE_DBUS_SESSION = /Sessions/1
+# environment
+LC_MEASUREMENT = ru_RU.UTF-8
+# environment
+QT_STYLE_OVERRIDE = gtk2
+# environment
+SSH_AGENT_PID = 3113
+# environment
+PAGER = less
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = ru_RU.UTF-8
+# environment
+MOZ_PLUGIN_PATH = /usr/lib/mozilla/plugins
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+COLORTERM = truecolor
+# environment
+VISUAL = vim
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/matt/.gtkrc-2.0:/home/matt/.config/gtkrc-2.0
+# environment
+HOME = /home/matt
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-845cc839-1.67.0-main.sock
+# environment
+TERM = xterm-256color
+# environment
+XDG_SESSION_ID = 4
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SHELL_SESSION_ID = 0ffcb681845d4113b84c46c16df6d95e
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# environment
+KDE_FULL_SESSION = true
+# environment
+QTWEBENGINE_CHROMIUM_FLAGS = -blink-settings=darkModeEnabled=true -enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter
+# environment
+LC_IDENTIFICATION = ru_RU.UTF-8
+# variable set hash-table stats:
+ 
+# Load=147/1024=14%, Rehash=0, Collisions=23/181=13%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2081, inode 157318): 13 files, no impossibilities.
+
+# 13 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+src/parce/valid_input.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/utils/err_exit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+cub3d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/utils/move.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/map/map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/screen/ray_walls.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/map/tmp_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-05 17:19:19.6028674
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utils/manage.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	/bin/rm -rf $(OBJ)
+	make -C ./libft/ clean
+	make -C ./mlx/ clean
+
+# Not a target:
+src/parce/file_parce.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+lft:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 40):
+	make -C ./libft
+	make -C ./mlx
+
+cub3d: src/parce/identifiers/ident_parce.o src/parce/identifiers/resolution.o src/parce/identifiers/texture.o src/parce/map/map.o src/parce/map/symbol_check.o src/parce/map/tmp_map.o src/parce/map/player.o src/parce/file_parce.o src/parce/valid_input.o src/screen/raycasting.o src/screen/screen.o src/screen/texturisation.o src/screen/mini_map.o src/utils/move.o src/utils/turn.o src/screen/draw_sprite.o src/screen/ray_walls.o src/utils/err_exit.o src/utils/init_struct.o src/utils/bmp.o src/utils/manage.o cub3d.o lft
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 44):
+	gcc $(FLAGS) $(INC) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
+
+re: fclean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/map/symbol_check.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/identifiers/texture.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/map/player.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: cub3d
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+fclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 52):
+	/bin/rm -f $(NAME)
+	make -C ./libft/ fclean
+
+# Not a target:
+src/utils/bmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/utils/init_struct.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/screen/draw_sprite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/screen/texturisation.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/screen/screen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/utils/turn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/identifiers/ident_parce.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/screen/mini_map.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/identifiers/resolution.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/screen/raycasting.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=31/1024=3%, Rehash=0, Collisions=2/70=3%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 45 / storage = 674 B / avg = 14 B
+# current buf: size = 8162 B / used = 674 B / count = 45 / avg = 14 B
+
+# strcache performance: lookups = 61 / hit rate = 26%
+# hash-table stats:
+# Load=45/8192=1%, Rehash=0, Collisions=0/61=0%
+# Finished Make data base on Tue May 10 10:23:07 2022
+
+ 
