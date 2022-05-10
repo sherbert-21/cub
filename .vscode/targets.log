@@ -8,11 +8,11 @@ make: *** No rule to make target 'src/parce/identifiers/ident_parce.o', needed b
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue May 10 10:23:07 2022
+# Make data base, printed on Tue May 10 10:40:29 2022
 
 # Variables
 
-# makefile (from 'Makefile', line 29)
+# makefile (from 'Makefile', line 31)
 OBJ = $(SRC:.c=.o)
 # environment
 GDK_BACKEND = x11
@@ -20,7 +20,7 @@ GDK_BACKEND = x11
 LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
-# makefile (from 'Makefile', line 5)
+# makefile (from 'Makefile', line 7)
 SRC = src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c cub3d.c
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
@@ -74,8 +74,6 @@ VSCODE_LOG_STACK = false
 VSCODE_CODE_CACHE_PATH = /home/matt/.config/Code - OSS/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
-# makefile (from 'Makefile', line 33)
-LIBFT = -L ./libft -lft
 # environment
 LANG = C
 # environment
@@ -136,7 +134,7 @@ CUDA_PATH = /opt/cuda
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
 FZF_DEFAULT_COMMAND = command rg -uu -g '!.git' --files
-# makefile (from 'Makefile', line 3)
+# makefile (from 'Makefile', line 5)
 FLAGS = -Wall -Werror -Wextra -g -fsanitize=address
 # environment
 SESSION_MANAGER = local/mattartix:@/tmp/.ICE-unix/1546,unix/mattartix:/tmp/.ICE-unix/1546
@@ -154,8 +152,8 @@ DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-F1RnvF2Tg8,guid=e11f744317735
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# makefile
-SHELL = /bin/sh
+# makefile (from 'Makefile', line 1)
+SHELL = /bin/zsh
 # environment
 LESS_TERMCAP_us = [1;32m
 # default
@@ -168,6 +166,8 @@ ANDROID_NDK = /opt/android-ndk
 PROFILEHOME = /home/matt
 # environment
 MAKELEVEL := 0
+# makefile (from 'Makefile', line 43)
+MLX_DIR = ./minilibx-linux
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
@@ -192,22 +192,24 @@ LESS_TERMCAP_mb = [1;31m
 GOBIN = /home/matt/Documents/GIT/go/bin
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'Makefile', line 35)
-MLX = -L ./mlx -lmlx -framework OpenGL -framework AppKit
+# makefile (from 'Makefile', line 42)
+MLX = libmlx.a
 # environment
 LC_TELEPHONE = ru_RU.UTF-8
 # automatic
 ?F = $(notdir $?)
 # environment
 KDE_APPLICATIONS_AS_SCOPE = 1
-# makefile (from 'Makefile', line 31)
+# makefile (from 'Makefile', line 33)
 INC = -I ./include -I ./libft -I ./mlx
-# makefile (from 'Makefile', line 1)
+# makefile (from 'Makefile', line 3)
 NAME = cub3d
 # environment
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
+# makefile (from 'Makefile', line 40)
+UNAME_S := Linux
 # environment
 LS_COLORS = di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43
 # automatic
@@ -242,8 +244,12 @@ USER = matt
 MAKE_VERSION := 4.3
 # environment
 KDE_SESSION_UID = 1000
+# 'override' directive
+.SHELLSTATUS := 0
 # environment
 KONSOLE_DBUS_SESSION = /Sessions/1
+# makefile (from 'Makefile', line 60)
+LDFLAGS = -lX11 -lXext -lm -L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
 # environment
 LC_MEASUREMENT = ru_RU.UTF-8
 # environment
@@ -294,6 +300,8 @@ QT_AUTO_SCREEN_SCALE_FACTOR = 0
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'Makefile', line 35)
+LIB_DIR = ./libft
 # environment
 SHELL_SESSION_ID = 0ffcb681845d4113b84c46c16df6d95e
 # environment
@@ -307,8 +315,7 @@ QTWEBENGINE_CHROMIUM_FLAGS = -blink-settings=darkModeEnabled=true -enable-featur
 # environment
 LC_IDENTIFICATION = ru_RU.UTF-8
 # variable set hash-table stats:
- 
-# Load=147/1024=14%, Rehash=0, Collisions=23/181=13%
+# Load=151/1024=15%, Rehash=0, Collisions=23/194=12%
 
 # Pattern-specific Variable Values
 
@@ -316,9 +323,9 @@ LC_IDENTIFICATION = ru_RU.UTF-8
 
 # Directories
 
-# . (device 2081, inode 157318): 13 files, no impossibilities.
+# . (device 2081, inode 157318): 25 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 25 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -371,7 +378,7 @@ src/parce/map/tmp_map.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-05 17:19:19.6028674
+#  Last modified 2022-05-10 10:40:21.4701354
 #  File has been updated.
 #  Successfully updated.
 
@@ -385,8 +392,8 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 47):
-	/bin/rm -rf $(OBJ)
+#  recipe to execute (from 'Makefile', line 75):
+	$(RM) -rf $(OBJ)
 	make -C ./libft/ clean
 	make -C ./mlx/ clean
 
@@ -400,16 +407,16 @@ lft:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 40):
-	make -C ./libft
-	make -C ./mlx
+#  recipe to execute (from 'Makefile', line 68):
+	@$(MAKE) -s -C $(LIB_DIR)
+	@$(MAKE) -s -C $(MLX_DIR)
 
 cub3d: src/parce/identifiers/ident_parce.o src/parce/identifiers/resolution.o src/parce/identifiers/texture.o src/parce/map/map.o src/parce/map/symbol_check.o src/parce/map/tmp_map.o src/parce/map/player.o src/parce/file_parce.o src/parce/valid_input.o src/screen/raycasting.o src/screen/screen.o src/screen/texturisation.o src/screen/mini_map.o src/utils/move.o src/utils/turn.o src/screen/draw_sprite.o src/screen/ray_walls.o src/utils/err_exit.o src/utils/init_struct.o src/utils/bmp.o src/utils/manage.o cub3d.o lft
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 44):
-	gcc $(FLAGS) $(INC) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
+#  recipe to execute (from 'Makefile', line 72):
+	gcc $(FLAGS) $(INC) $(OBJ) $(LDFLAGS) -o $(NAME)
 
 re: fclean all
 #  Implicit rule search has not been done.
@@ -450,11 +457,12 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 52):
-	/bin/rm -f $(NAME)
+#  recipe to execute (from 'Makefile', line 80):
+	$(RM) -f $(NAME)
 	make -C ./libft/ fclean
 
 # Not a target:
+ 
 src/utils/bmp.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -522,12 +530,12 @@ src/screen/raycasting.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 45 / storage = 674 B / avg = 14 B
-# current buf: size = 8162 B / used = 674 B / count = 45 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 57 / storage = 840 B / avg = 14 B
+# current buf: size = 8162 B / used = 840 B / count = 57 / avg = 14 B
 
-# strcache performance: lookups = 61 / hit rate = 26%
+# strcache performance: lookups = 73 / hit rate = 21%
 # hash-table stats:
-# Load=45/8192=1%, Rehash=0, Collisions=0/61=0%
-# Finished Make data base on Tue May 10 10:23:07 2022
+# Load=57/8192=1%, Rehash=0, Collisions=0/73=0%
+# Finished Make data base on Tue May 10 10:40:29 2022
 
  

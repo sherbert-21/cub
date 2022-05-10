@@ -33,11 +33,10 @@ OBJ		= 	$(SRC:.c=.o)
 INC		= -I ./include -I ./libft -I ./mlx
 
 LIB_DIR = ./libft
-LIBFT	=	-L $(LIB_DIR) -lft
 
 
 
-
+# MLX for Linux && Darwin
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	MLX = libmlx.a
@@ -58,6 +57,7 @@ ifeq ($(UNAME_S),Darwin)
 	endif
 endif
 
+LDFLAGS +=	-L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
 
 
 # MLX		=	-L ./mlx -lmlx -framework OpenGL -framework AppKit
@@ -69,15 +69,15 @@ lft:
 	@$(MAKE) -s -C $(MLX_DIR)
 
 $(NAME): $(OBJ) lft
-	gcc $(FLAGS) $(INC) $(OBJ) $(LIBFT) $(MLX_DIR)/$(MLX) -o $(NAME)
+	gcc $(FLAGS) $(INC) $(OBJ) $(LDFLAGS) -o $(NAME)
 
 clean:
-	/bin/rm -rf $(OBJ)
+	$(RM) -rf $(OBJ)
 	make -C ./libft/ clean
 	make -C ./mlx/ clean
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	$(RM) -f $(NAME)
 	make -C ./libft/ fclean
 
 re: fclean all
