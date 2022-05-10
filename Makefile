@@ -1,6 +1,6 @@
 NAME	= 	cub3d
 
-FLAGS	= 	-Wall -Werror -Wextra -g -fsanitize=address
+FLAGS	= 	-Wall -Werror -Wextra -g
 
 SRC		= 	\
             src/parce/identifiers/ident_parce.c \
@@ -29,25 +29,43 @@ SRC		= 	\
 
 OBJ		= 	$(SRC:.c=.o)
 
-INC		= -I ./include -I ./libft -I ./mlx
+INC		= -I./include -I./libft -I$(MLX_DIR)
 
 LIBFT	=	-L ./libft -lft
+MLX		=	-L$(MLX_DIR) -lmlx
 
-MLX		=	-L ./mlx -lmlx -framework OpenGL -framework AppKit
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	MLX_DIR = ./minilibx-linux
+	MLX += -lX11 -lXext -lm
+endif
+ifeq ($(UNAME_S),Darwin)
+	UNAME_R := $(shell uname -r | cut -d. -f1)
+	VER := $(shell test $(UNAME_R) -ge 17 && echo 'new' || echo 'old')
+	ifeq ($(VER),new)
+		MLX_DIR = ./mlx
+		MLX += -framework OpenGL -framework AppKit
+
+	endif
+	ifeq ($(VER),old)
+		MLX_DIR = ./mlx
+		MLX += -framework OpenGL -framework AppKit
+	endif
+endif
 
 all : $(NAME)
 
 lft:
 	make -C ./libft
-	make -C ./mlx
+	make -C $(MLX_DIR)
 
 $(NAME): $(OBJ) lft
-	gcc $(FLAGS) $(INC) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
+	gcc $(FLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME) $(MLX) 
 
 clean:
 	/bin/rm -rf $(OBJ)
 	make -C ./libft/ clean
-	make -C ./mlx/ clean
+	make -C $(MLX_DIR) clean
 
 fclean: clean
 	/bin/rm -f $(NAME)

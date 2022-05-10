@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/05 17:31:42 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 20:39:25 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,56 @@
 # include <fcntl.h>
 # include <math.h>
 
-# define ESC 53
-# define A 0
-# define S 1
-# define D 2
-# define W 13
-# define _LEFT 123
-# define _RIGHT 124
+# if defined(__APPLE__)
+#  define KEY_W 13
+#  define KEY_D 2
+#  define KEY_A 0
+#  define KEY_S 1
+#  define KEY_PLUS 24
+#  define KEY_MINUS 27
+#  define KEY_ESC 53
+#  define KEY_1 18
+#  define KEY_2 19
+#  define KEY_3 20
+#  define KEY_LEFT 123
+#  define KEY_RIGHT 124
+#  define KEY_UP 126
+#  define KEY_DOWN 125
+#  define KEY_R 15
+#  define KEY_G 5
+#  define KEY_B 11
+#  define KEY_I 34
+#  define KEY_0 29
+#  define KEY_E 14
+#  define KEY_Q 12
+#  define KEY_BR_L 33
+#  define KEY_BR_R 30
+
+# elif __linux__
+#  define KEY_W 119
+#  define KEY_D 100
+#  define KEY_A 97
+#  define KEY_S 115
+#  define KEY_PLUS 61
+#  define KEY_MINUS 45
+#  define KEY_ESC 65307
+#  define KEY_1 49
+#  define KEY_2 50
+#  define KEY_3 51
+#  define KEY_LEFT 65361
+#  define KEY_RIGHT 65363
+#  define KEY_UP 65362
+#  define KEY_DOWN 65364
+#  define KEY_R 114
+#  define KEY_G 103
+#  define KEY_B 98
+#  define KEY_I 105
+#  define KEY_0 48
+#  define KEY_E 101
+#  define KEY_Q 113
+#  define KEY_BR_L 91
+#  define KEY_BR_R 93
+# endif
 
 # define BLACK 0
 # define WHITE 16777215
