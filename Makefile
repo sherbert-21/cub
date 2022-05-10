@@ -30,8 +30,8 @@ OBJ		= 	$(SRC:.c=.o)
 
 # INC		= -I ./include -I ./libft -I ./mlx
 
-INCLUDES_DIR 	=	./includes/
-LIBFT_DIR		=	./libft/
+INCLUDES_DIR 	=	./includes
+LIBFT_DIR		=	./libft
 
 # MLX for Linux && Darwin
 UNAME_S := $(shell uname -s)
@@ -62,23 +62,26 @@ FLAGS_DEBUG		=	-g -fsanitize=address
 FLAGS_LIB		=	-L$(LIBFT_DIR) -lft -L$(MLX_DIR) -lmlx
 
 
-FLAGS_FINAL		=	$(FLAGS_ERRORS) $(FLAGS_INCLUDES) \
-					$(FLAGS_OPTI) $(FLAGS_DEBUG) $(FLAGS_LIB)
+FLAGS_FINAL		=	$(FLAGS_ERRORS) $(FLAGS_OPTI) \
+					$(FLAGS_DEBUG) $(FLAGS_INCLUDES) $(FLAGS_LIB)
 
 
 
 # MLX		=	-L ./mlx -lmlx -framework OpenGL -framework AppKit
 
+.PHONY: all lft clean fclean re
+
 all : $(NAME)
 
 lft:
-	echo $(FLAGS_FINAL)
-	$(MAKE) -s -C $(LIBFT_DIR)
-	$(MAKE) -s -C $(MLX_DIR)
+	$(MAKE) -C $(LIBFT_DIR)
+	$(MAKE) -C $(MLX_DIR)
 
-$(NAME): $(OBJ) lft
-	echo $(FLAGS_FINAL)
+$(NAME): lft $(OBJ) 
 	gcc $(FLAGS_FINAL) $(OBJ) -o $(NAME)
+
+$(OBJ): $(SRC)
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
 clean:
 	$(RM) -rf $(OBJ)

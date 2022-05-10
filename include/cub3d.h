@@ -6,14 +6,14 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 16:51:25 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:33:56 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
-# include "libft.h"
-# include "mlx.h"
+# include <libft.h>
+# include <mlx.h>
 # include <fcntl.h>
 # include <math.h>
 

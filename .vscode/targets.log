@@ -1,6 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'src/main/cub3d.o', needed by 'cub3d'.  Stop.
-
+make -C ./libft
+ 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +8,1112 @@ make: *** No rule to make target 'src/main/cub3d.o', needed by 'cub3d'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue May 10 17:16:32 2022
+# Make data base, printed on Tue May 10 17:33:27 2022
+
+# Variables
+
+# makefile (from 'Makefile', line 68)
+OBJ = $(SRC:.c=.o)
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 19)
+SRC = ft_atoi.c ft_isascii.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isprint.c ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcat.c ft_strlcpy.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_calloc.c ft_strdup.c ft_itoa.c ft_strjoin.c ft_substr.c ft_strtrim.c ft_split.c ft_strmapi.c ft_putstr_fd.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstadd_front.c ft_lstnew.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c gnl.c ft_rgb.c utils_gnl.c
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d82877a7-0660-44e2-9c45-635f793250d9.sock
+# environment
+KONSOLE_DBUS_SERVICE = :1.51
+# environment
+LC_NAME = ru_RU.UTF-8
+# environment
+LC_NUMERIC = ru_RU.UTF-8
+# environment
+VSCODE_CWD = /home/matt/Documents/GIT/ECOLE42/cub
+# environment
+FZF_CTRL_T_OPTS = --preview 'command bat --color=always --line-range :500 {}' 
+# environment
+WINDOWID = 115343367
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+LC_ADDRESS = ru_RU.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+GOPATH = /home/matt/Documents/GIT/go
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+KONSOLE_VERSION = 220400
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/matt/Documents/GIT/ECOLE42/cub
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/matt
+# environment
+OLDPWD = /home/matt/Documents/GIT/ECOLE42/cub
+# environment
+KONSOLE_DBUS_WINDOW = /Windows/1
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/matt/.config/Code - OSS/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/matt/.Xauthority
+# default
+.LOADED := 
+# environment
+ 
+LESS_TERMCAP_md = [1;31m
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+COLORFGBG = 15;0
+# makefile
+MAKEFLAGS = pqrRw
+# environment
+LESS_TERMCAP_so = [7m
+# environment
+ANDROID_NDK_HOME = /opt/android-ndk
+# makefile
+CURDIR := /home/matt/Documents/GIT/ECOLE42/cub/libft
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrRw
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXDfjGoi/agent.2960
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /home/matt/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = Dracula-cursors
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 15370
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+CUDA_PATH = /opt/cuda
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+FZF_DEFAULT_COMMAND = command rg -uu -g '!.git' --files
+# makefile (from 'Makefile', line 15)
+FLAGS = -c -Wall -Werror -Wextra 
+# environment
+SESSION_MANAGER = local/mattartix:@/tmp/.ICE-unix/1525,unix/mattartix:/tmp/.ICE-unix/1525
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = gtk
+# environment
+CHROME_DESKTOP = code-oss.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-a2IsbsdGZZ,guid=1c90b1c21f62dff907f30ebd627a5103
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# environment
+SHLVL = 1
+# environment
+ANDROID_NDK = /opt/android-ndk
+# environment
+PROFILEHOME = /home/matt
+# environment
+MAKELEVEL := 1
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/go/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/bin:/home/matt/Documents/GIT/go/bin
+# environment
+LESS_TERMCAP_se = [27m
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = 
+# environment
+LC_MONETARY = ru_RU.UTF-8
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = ru_RU.UTF-8
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+GOBIN = /home/matt/Documents/GIT/go/bin
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+LC_TELEPHONE = ru_RU.UTF-8
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# makefile (from 'Makefile', line 13)
+NAME = libft.a
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# environment
+LS_COLORS = di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+GREP_COLOR = 37;45
+# environment
+GREP_COLORS = mt=37;45
+# environment
+LOGNAME = matt
+# environment
+FZF_CTRL_T_COMMAND = command rg -uu -g '!.git' --files
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = matt
+# default
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# environment
+KONSOLE_DBUS_SESSION = /Sessions/1
+# environment
+LC_MEASUREMENT = ru_RU.UTF-8
+# environment
+QT_STYLE_OVERRIDE = gtk2
+# environment
+SSH_AGENT_PID = 2961
+# environment
+PAGER = less
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = ru_RU.UTF-8
+# environment
+MOZ_PLUGIN_PATH = /usr/lib/mozilla/plugins
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+COLORTERM = truecolor
+# makefile (from 'Makefile', line 17)
+HEAD = libft.h
+# environment
+VISUAL = vim
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/matt/.gtkrc-2.0:/home/matt/.config/gtkrc-2.0
+# environment
+HOME = /home/matt
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-845cc839-1.67.0-main.sock
+# environment
+TERM = xterm-256color
+# environment
+XDG_SESSION_ID = 4
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SHELL_SESSION_ID = 1b1de0848ef64188b402c786de0671da
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# environment
+KDE_FULL_SESSION = true
+# environment
+QTWEBENGINE_CHROMIUM_FLAGS = -blink-settings=darkModeEnabled=true -enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter
+# environment
+LC_IDENTIFICATION = ru_RU.UTF-8
+# variable set hash-table stats:
+# Load=144/1024=14%, Rehash=0, Collisions=23/180=13%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2081, inode 157391): 97 files, no impossibilities.
+
+# 97 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+ft_isalpha.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.3605142
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strchr.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4457725
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putstr_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7153652
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isprint.o:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-05-10 17:32:45.3754787
+#  File has been updated.
+#  Successfully updated.
+
+libft.a: ft_atoi.o ft_isascii.o ft_isalnum.o ft_isalpha.o ft_isdigit.o ft_isprint.o ft_tolower.o ft_toupper.o ft_strlen.o ft_strlcat.o ft_strlcpy.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_bzero.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_calloc.o ft_strdup.o ft_itoa.o ft_strjoin.o ft_substr.o ft_strtrim.o ft_split.o ft_strmapi.o ft_putstr_fd.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstadd_front.o ft_lstnew.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o gnl.o ft_rgb.o utils_gnl.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-10 17:32:45.9759268
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 74):
+	gcc  $(FLAGS) $(SRC) 
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+# Not a target:
+ft_lstmap.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8730436
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_toupper.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.3907298
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isalnum.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.3527402
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putendl_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7411197
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstsize.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7928956
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-05 17:19:19.6031889
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strlen.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4045067
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strnstr.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4726715
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strmapi.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7025287
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstiter.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8593206
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strdup.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.6062523
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstadd_front.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7673616
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstadd_back.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8187486
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstclear.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8460094
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 79):
+	/bin/rm -f $(OBJ)
+	/bin/rm -f *.o
+
+# Not a target:
+ft_itoa.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.6299882
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memset.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5255296
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isascii.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.3395976
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memcpy.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4989762
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strtrim.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.6711073
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstnew.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7801862
+#  File has been updated.
+#  Successfully updated.
+
+re: fclean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ft_bzero.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5388201
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isdigit.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.3678876
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putnbr_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7545602
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strjoin.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.6435529
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strlcat.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4187414
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memccpy.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5528353
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: libft.a
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+fclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 83):
+	/bin/rm -f $(NAME)
+
+# Not a target:
+gnl.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8931585
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+utils_gnl.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.9410536
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memmove.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5126664
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_atoi.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.331368
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strlcpy.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4324009
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_calloc.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5932691
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_split.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.6888775
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memcmp.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5801178
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstdelone.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8319592
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_rgb.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.9169902
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_substr.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.6568609
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strrchr.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4590588
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strncmp.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.4855918
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putchar_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.7281787
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstlast.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.8059079
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_tolower.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.3830481
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memchr.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:32:45.5668852
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=54/1024=5%, Rehash=0, Collisions=5/116=4%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 106 / storage = 1281 B / avg = 12 B
+# current buf: size = 8162 B / used = 1281 B / count = 106 / avg = 12 B
+
+# strcache performance: lookups = 165 / hit rate = 35%
+# hash-table stats:
+# Load=106/8192=1%, Rehash=0, Collisions=2/165=1%
+ 
+# Finished Make data base on Tue May 10 17:33:27 2022
+
+ 
+make -C ./minilibx-linux
+ 
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Tue May 10 17:33:27 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d82877a7-0660-44e2-9c45-635f793250d9.sock
+# environment
+KONSOLE_DBUS_SERVICE = :1.51
+# environment
+LC_NAME = ru_RU.UTF-8
+# environment
+LC_NUMERIC = ru_RU.UTF-8
+# environment
+VSCODE_CWD = /home/matt/Documents/GIT/ECOLE42/cub
+# environment
+FZF_CTRL_T_OPTS = --preview 'command bat --color=always --line-range :500 {}' 
+# environment
+WINDOWID = 115343367
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+LC_ADDRESS = ru_RU.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+GOPATH = /home/matt/Documents/GIT/go
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+KONSOLE_VERSION = 220400
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/matt/Documents/GIT/ECOLE42/cub
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/matt
+# environment
+OLDPWD = /home/matt/Documents/GIT/ECOLE42/cub
+# environment
+KONSOLE_DBUS_WINDOW = /Windows/1
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/matt/.config/Code - OSS/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/matt/.Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [1;31m
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+COLORFGBG = 15;0
+# makefile
+MAKEFLAGS = pqrRw
+# environment
+LESS_TERMCAP_so = [7m
+# environment
+ANDROID_NDK_HOME = /opt/android-ndk
+# makefile
+CURDIR := /home/matt/Documents/GIT/ECOLE42/cub/minilibx-linux
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrRw
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXDfjGoi/agent.2960
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /home/matt/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = Dracula-cursors
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 15370
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+CUDA_PATH = /opt/cuda
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+FZF_DEFAULT_COMMAND = command rg -uu -g '!.git' --files
+# environment
+SESSION_MANAGER = local/mattartix:@/tmp/.ICE-unix/1525,unix/mattartix:/tmp/.ICE-unix/1525
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = gtk
+# environment
+CHROME_DESKTOP = code-oss.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-a2IsbsdGZZ,guid=1c90b1c21f62dff907f30ebd627a5103
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# environment
+SHLVL = 1
+# environment
+ANDROID_NDK = /opt/android-ndk
+# environment
+PROFILEHOME = /home/matt
+# environment
+MAKELEVEL := 1
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/go/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/bin:/home/matt/Documents/GIT/go/bin
+# environment
+LESS_TERMCAP_se = [27m
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = 
+# environment
+LC_MONETARY = ru_RU.UTF-8
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = ru_RU.UTF-8
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+GOBIN = /home/matt/Documents/GIT/go/bin
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+LC_TELEPHONE = ru_RU.UTF-8
+# automatic
+?F = $(notdir $?)
+# environment
+ 
+KDE_APPLICATIONS_AS_SCOPE = 1
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# environment
+LS_COLORS = di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+GREP_COLOR = 37;45
+# environment
+GREP_COLORS = mt=37;45
+# environment
+LOGNAME = matt
+# environment
+FZF_CTRL_T_COMMAND = command rg -uu -g '!.git' --files
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = matt
+# default
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# environment
+KONSOLE_DBUS_SESSION = /Sessions/1
+# environment
+LC_MEASUREMENT = ru_RU.UTF-8
+# environment
+QT_STYLE_OVERRIDE = gtk2
+# environment
+SSH_AGENT_PID = 2961
+# environment
+PAGER = less
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = ru_RU.UTF-8
+# environment
+MOZ_PLUGIN_PATH = /usr/lib/mozilla/plugins
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+COLORTERM = truecolor
+# environment
+VISUAL = vim
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/matt/.gtkrc-2.0:/home/matt/.config/gtkrc-2.0
+# environment
+HOME = /home/matt
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-845cc839-1.67.0-main.sock
+# environment
+TERM = xterm-256color
+# environment
+XDG_SESSION_ID = 4
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SHELL_SESSION_ID = 1b1de0848ef64188b402c786de0671da
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# environment
+KDE_FULL_SESSION = true
+# environment
+QTWEBENGINE_CHROMIUM_FLAGS = -blink-settings=darkModeEnabled=true -enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter
+# environment
+LC_IDENTIFICATION = ru_RU.UTF-8
+# variable set hash-table stats:
+# Load=139/1024=14%, Rehash=0, Collisions=18/174=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2081, inode 157693): 52 files, no impossibilities.
+
+# 52 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+do_configure:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := do_configure
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 17):
+	./configure
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-10 17:27:04.8671634
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 20):
+	./configure clean
+
+re: clean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: do_configure
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/23=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 61 / storage = 853 B / avg = 13 B
+# current buf: size = 8162 B / used = 853 B / count = 61 / avg = 13 B
+
+# strcache performance: lookups = 72 / hit rate = 15%
+# hash-table stats:
+# Load=61/8192=1%, Rehash=0, Collisions=0/72=0%
+# Finished Make data base on Tue May 10 17:33:27 2022
+
+ 
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Tue May 10 17:33:27 2022
 
 # Variables
 
@@ -22,7 +1127,7 @@ LC_ALL = C
 NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 5)
 SRC = src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c 
-# makefile (from 'Makefile', line 62)
+# makefile (from 'Makefile', line 61)
 FLAGS_DEBUG = -g -fsanitize=address
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/matt/.gtkrc:/home/matt/.config/gtkrc
@@ -133,6 +1238,7 @@ XDG_SESSION_TYPE = x11
 # environment
 CUDA_PATH = /opt/cuda
 # automatic
+ 
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
 FZF_DEFAULT_COMMAND = command rg -uu -g '!.git' --files
@@ -166,7 +1272,7 @@ ANDROID_NDK = /opt/android-ndk
 PROFILEHOME = /home/matt
 # environment
 MAKELEVEL := 0
-# makefile (from 'Makefile', line 41)
+# makefile (from 'Makefile', line 40)
 MLX_DIR = ./minilibx-linux
 # default
 MAKE = $(MAKE_COMMAND)
@@ -184,8 +1290,8 @@ LC_MONETARY = ru_RU.UTF-8
 MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
-# makefile (from 'Makefile', line 35)
-LIBFT_DIR = libft/
+# makefile (from 'Makefile', line 34)
+LIBFT_DIR = ./libft
 # environment
 LC_TIME = ru_RU.UTF-8
 # environment
@@ -193,14 +1299,14 @@ LESS_TERMCAP_mb = [1;31m
 # environment
 GOBIN = /home/matt/Documents/GIT/go/bin
 # makefile (from 'Makefile', line 33)
-INCLUDES_DIR = includes/
-# makefile (from 'Makefile', line 63)
+INCLUDES_DIR = ./includes
+# makefile (from 'Makefile', line 62)
 FLAGS_LIB = -L$(LIBFT_DIR) -lft -L$(MLX_DIR) -lmlx
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'Makefile', line 61)
+# makefile (from 'Makefile', line 60)
 FLAGS_OPTI = -O2 -funroll-loops
-# makefile (from 'Makefile', line 40)
+# makefile (from 'Makefile', line 39)
 MLX = libmlx.a
 # environment
 LC_TELEPHONE = ru_RU.UTF-8
@@ -214,7 +1320,7 @@ NAME = cub3d
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
-# makefile (from 'Makefile', line 38)
+# makefile (from 'Makefile', line 37)
 UNAME_S := Linux
 # environment
 LS_COLORS = di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43
@@ -262,7 +1368,7 @@ QT_STYLE_OVERRIDE = gtk2
 SSH_AGENT_PID = 2961
 # environment
 PAGER = less
-# makefile (from 'Makefile', line 59)
+# makefile (from 'Makefile', line 58)
 FLAGS_ERRORS = -Wall -Werror -Wextra
 # environment
 _ = /usr/bin/make
@@ -280,8 +1386,8 @@ VISUAL = vim
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# makefile (from 'Makefile', line 66)
-FLAGS_FINAL = $(FLAGS_COMPILER) $(FLAGS) $(FLAGS_ERRORS) $(FLAGS_OPTI) $(FLAGS_DEBUG)
+# makefile (from 'Makefile', line 65)
+FLAGS_FINAL = $(FLAGS_ERRORS) $(FLAGS_OPTI) $(FLAGS_DEBUG) $(FLAGS_INCLUDES) $(FLAGS_LIB)
 # environment
 GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/matt/.gtkrc-2.0:/home/matt/.config/gtkrc-2.0
 # environment
@@ -314,7 +1420,7 @@ SHELL_SESSION_ID = 1b1de0848ef64188b402c786de0671da
 KDE_SESSION_VERSION = 5
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
-# makefile (from 'Makefile', line 60)
+# makefile (from 'Makefile', line 59)
 FLAGS_INCLUDES = -I$(INCLUDES_DIR) -I$(LIBFT_DIR) -I$(MLX_DIR)
 # environment
 KDE_FULL_SESSION = true
@@ -323,8 +1429,7 @@ QTWEBENGINE_CHROMIUM_FLAGS = -blink-settings=darkModeEnabled=true -enable-featur
 # environment
 LC_IDENTIFICATION = ru_RU.UTF-8
 # variable set hash-table stats:
- 
-# Load=155/1024=15%, Rehash=0, Collisions=24/197=12%
+# Load=155/1024=15%, Rehash=0, Collisions=29/212=14%
 
 # Pattern-specific Variable Values
 
@@ -343,112 +1448,210 @@ LC_IDENTIFICATION = ru_RU.UTF-8
 # Files
 
 # Not a target:
-src/parce/valid_input.o:
+src/screen/screen.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/parce/valid_input.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/utils/err_exit.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/parce/map/tmp_map.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/utils/err_exit.o:
+src/utils/err_exit.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-src/utils/move.o:
+src/utils/move.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
-# Not a target:
-src/parce/map/map.o:
+src/parce/map/map.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
-# Not a target:
-src/screen/ray_walls.o:
+ 
+src/screen/ray_walls.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
-# Not a target:
-src/parce/map/tmp_map.o:
+src/parce/map/tmp_map.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-10 17:16:06.0009782
+#  Last modified 2022-05-10 17:33:26.7177039
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/main/cub3d.o:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-
-# Not a target:
-src/utils/manage.o:
+src/parce/valid_input.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+src/main/cub3d.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/utils/manage.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
 clean:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 82):
+#  recipe to execute (from 'Makefile', line 87):
 	$(RM) -rf $(OBJ)
 	$(MAKE) -C $(LIBFT_DIR) clean
 	$(MAKE) -C $(MLX_DIR) clean
 
 # Not a target:
-src/parce/file_parce.o:
+src/parce/identifiers/ident_parce.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/parce/file_parce.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/parce/identifiers/resolution.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parce/identifiers/texture.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 lft:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 75):
-	$(MAKE) -s -C $(LIB_DIR)
-	$(MAKE) -s -C $(MLX_DIR)
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := lft
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=5/20=25%
+#  recipe to execute (from 'Makefile', line 77):
+	$(MAKE) -C $(LIBFT_DIR)
+	$(MAKE) -C $(MLX_DIR)
 
-cub3d: src/main/cub3d.o src/parce/identifiers/ident_parce.o src/parce/identifiers/resolution.o src/parce/identifiers/texture.o src/parce/map/map.o src/parce/map/symbol_check.o src/parce/map/tmp_map.o src/parce/map/player.o src/parce/file_parce.o src/parce/valid_input.o src/screen/raycasting.o src/screen/screen.o src/screen/texturisation.o src/screen/mini_map.o src/utils/move.o src/utils/turn.o src/screen/draw_sprite.o src/screen/ray_walls.o src/utils/err_exit.o src/utils/init_struct.o src/utils/bmp.o src/utils/manage.o lft
+cub3d: lft src/main/cub3d.o src/parce/identifiers/ident_parce.o src/parce/identifiers/resolution.o src/parce/identifiers/texture.o src/parce/map/map.o src/parce/map/symbol_check.o src/parce/map/tmp_map.o src/parce/map/player.o src/parce/file_parce.o src/parce/valid_input.o src/screen/raycasting.o src/screen/screen.o src/screen/texturisation.o src/screen/mini_map.o src/utils/move.o src/utils/turn.o src/screen/draw_sprite.o src/screen/ray_walls.o src/utils/err_exit.o src/utils/init_struct.o src/utils/bmp.o src/utils/manage.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 79):
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+#  recipe to execute (from 'Makefile', line 81):
 	gcc $(FLAGS_FINAL) $(OBJ) -o $(NAME)
 
 re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/screen/ray_walls.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/parce/map/symbol_check.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/parce/identifiers/texture.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/screen/texturisation.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/parce/map/symbol_check.o:
+src/parce/map/map.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-src/parce/identifiers/texture.o:
+src/parce/map/player.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-src/parce/map/player.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
 
 # Not a target:
 .DEFAULT:
@@ -457,93 +1660,191 @@ src/parce/map/player.o:
 #  File has not been updated.
 
 all: cub3d
+#  Phony target (prerequisite of .PHONY).
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
 
 fclean: clean
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 87):
+#  recipe to execute (from 'Makefile', line 92):
 	$(RM) -rf $(NAME)
 	$(MAKE) -C $(LIBFT_DIR) fclean
 
 # Not a target:
-src/utils/bmp.o:
+src/parce/map/symbol_check.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/utils/init_struct.o:
+src/screen/draw_sprite.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/utils/bmp.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/utils/init_struct.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/screen/draw_sprite.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/utils/move.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/screen/draw_sprite.o:
+src/parce/map/player.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/screen/texturisation.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/utils/manage.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/screen/texturisation.o:
+src/screen/raycasting.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/screen/screen.o:
+src/utils/turn.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/screen/screen.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/utils/turn.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/utils/bmp.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/parce/identifiers/ident_parce.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+src/screen/mini_map.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+ 
+src/parce/identifiers/resolution.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+src/parce/file_parce.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/screen/raycasting.o: src/main/cub3d.c src/parce/identifiers/ident_parce.c src/parce/identifiers/resolution.c src/parce/identifiers/texture.c src/parce/map/map.c src/parce/map/symbol_check.c src/parce/map/tmp_map.c src/parce/map/player.c src/parce/file_parce.c src/parce/valid_input.c src/screen/raycasting.c src/screen/screen.c src/screen/texturisation.c src/screen/mini_map.c src/utils/move.c src/utils/turn.c src/screen/draw_sprite.c src/screen/ray_walls.c src/utils/err_exit.c src/utils/init_struct.c src/utils/bmp.c src/utils/manage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	gcc $(FLAGS_FINAL) -c -o $@ $<
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all lft clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/utils/turn.o:
+src/screen/mini_map.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/parce/identifiers/ident_parce.o:
+src/main/cub3d.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/screen/mini_map.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/parce/identifiers/resolution.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/screen/raycasting.o:
+src/utils/init_struct.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=31/1024=3%, Rehash=0, Collisions=2/70=3%
+# Load=54/1024=5%, Rehash=0, Collisions=5/148=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 46 / storage = 717 B / avg = 15 B
-# current buf: size = 8162 B / used = 717 B / count = 46 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 69 / storage = 1242 B / avg = 18 B
+# current buf: size = 8162 B / used = 1242 B / count = 69 / avg = 18 B
 
-# strcache performance: lookups = 62 / hit rate = 25%
+# strcache performance: lookups = 136 / hit rate = 49%
 # hash-table stats:
-# Load=46/8192=1%, Rehash=0, Collisions=0/62=0%
-# Finished Make data base on Tue May 10 17:16:32 2022
+# Load=69/8192=1%, Rehash=0, Collisions=0/136=0%
+# Finished Make data base on Tue May 10 17:33:27 2022
 
  
