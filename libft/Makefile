@@ -1,85 +1,66 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/05/07 19:44:28 by sherbert          #+#    #+#              #
-#    Updated: 2022/05/04 08:44:09 by sherbert         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-NAME = libft.a
-
-FLAGS	= -c -Wall -Werror -Wextra 
-
-HEAD = libft.h
-
-SRC = \
-ft_atoi.c \
-ft_isascii.c \
-ft_isalnum.c \
-ft_isalpha.c \
-ft_isdigit.c \
-ft_isprint.c \
-ft_tolower.c \
-ft_toupper.c \
-ft_strlen.c \
-ft_strlcat.c \
-ft_strlcpy.c \
-ft_strchr.c \
-ft_strrchr.c \
-ft_strnstr.c \
-ft_strncmp.c \
-ft_memcpy.c \
-ft_memmove.c \
-ft_memset.c \
-ft_bzero.c \
-ft_memccpy.c \
-ft_memchr.c \
-ft_memcmp.c \
-ft_calloc.c \
-ft_strdup.c \
-ft_itoa.c \
-ft_strjoin.c \
-ft_substr.c \
-ft_strtrim.c \
-ft_split.c \
-ft_strmapi.c \
-ft_putstr_fd.c \
-ft_putchar_fd.c \
-ft_putendl_fd.c \
-ft_putnbr_fd.c \
-ft_lstadd_front.c \
-ft_lstnew.c \
-ft_lstsize.c \
-ft_lstlast.c \
-ft_lstadd_back.c \
-ft_lstdelone.c \
-ft_lstclear.c \
-ft_lstiter.c \
-ft_lstmap.c \
-gnl.c \
-ft_rgb.c \
-utils_gnl.c
+NAME		:=	libft.a
 
 
-OBJ		= 	$(SRC:.c=.o)
+CC_FLAGS	:=	-Wall -Wextra -Werror -Iincludes/ -O2
+CC			:=	gcc $(CC_FLAGS)
+
+HEADER_LIB	:=	$(addsuffix .h, $(addprefix includes/, libft get_next_line ft_printf))
+
+FT_IS		:=	alnum alpha ascii count digit in print space spacenl where minmax
+FT_LST 		:=	add_back add_front clear delone iter last map new size
+FT_MATH		:=	abs nbrlen hexlen baselen power degrad
+FT_MEM 		:=	bzero calloc memccpy memchr memcmp memcpy memfree memmove memset memalloc memdel intswap 
+FT_PUT 		:=	char endl nbr str char_fd endl_fd nbr_fd str_fd
+FT_STR 		:=	chr cmp dup join lcat lcpy cpy len mapi ncmp nstr rchr trim iteri append new
+FT_SUB 		:=	substr split split_str save_free linebreak
+FT_TO 		:=	tolower toupper atoi itoa
+FT_GNL 		:=	gnl utils_gnl
+FT_PRINTF	:=	choose convert_c convert_d convert_p convert_pct convert_s convert_u \
+				initializer parser_args parser_asterix parser place_bin printf uitoa_base
+FT_SORT		:=	quick
+FT_COLOR	:=	rgb
+
+SRC 		:= 	$(addsuffix .c, $(addprefix ft_is/ft_is, $(FT_IS)))					\
+				$(addsuffix .c, $(addprefix ft_lst/ft_lst, $(FT_LST)))				\
+				$(addsuffix .c, $(addprefix ft_math/ft_, $(FT_MATH)))				\
+				$(addsuffix .c, $(addprefix ft_mem/ft_, $(FT_MEM)))					\
+				$(addsuffix .c, $(addprefix ft_put/ft_put, $(FT_PUT)))				\
+				$(addsuffix .c, $(addprefix ft_skip/ft_skip_, $(FT_SKIP)))			\
+				$(addsuffix .c, $(addprefix ft_str/ft_str, $(FT_STR)))				\
+				$(addsuffix .c, $(addprefix ft_str/ft_, $(FT_SUB)))					\
+				$(addsuffix .c, $(addprefix ft_to/ft_, $(FT_TO)))					\
+				$(addsuffix .c, $(addprefix ft_gnl/, $(FT_GNL)))					\
+				$(addsuffix .c, $(addprefix ft_printf/ft_, $(FT_PRINTF)))			\
+				$(addsuffix .c, $(addprefix ft_sort/ft_sort_, $(FT_SORT)))			\
+				$(addsuffix .c, $(addprefix ft_color/ft_, $(FT_COLOR)))				\
 
 
-all: $(NAME)
+OBJ_LIB		:= 	$(SRC:.c=.o)
 
-$(NAME): $(OBJ)
-	gcc  $(FLAGS) $(SRC) 
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+
+# COLORS
+COLOR=\033[0;45m
+NC=\033[0m # No Color
+
+.PHONY: all clean fclean re norm
+
+all			:	$(NAME)
+
+$(NAME)		:	$(OBJ_LIB)
+	@$(AR) rcs $(NAME) $?
+	@echo -e "${COLOR}MEGA LIBFT DONE${NC}"
+
+%.o	:	%.c $(HEADER_LIB)
+	@${CC} ${CС_FLAGS} -c $< -o $@
 
 clean:
-	/bin/rm -f $(OBJ)
-	/bin/rm -f *.o
+	@$(RM) -rf $(OBJ_LIB)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@$(RM) -f $(NAME)
 
 re: fclean all
+
+norm:
+	@norminette $(SRC) $(HEADER)
+

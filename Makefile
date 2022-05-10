@@ -37,6 +37,7 @@ OBJS	= 	$(SRCS:%.c=%.o)
 
 INCLUDES_DIR 	=	./includes
 LIBFT_DIR		=	./libft
+LIBFT_INC_DIR	=	$(LIBFT_DIR)/includes
 
 
 # MLX for Linux && Darwin
@@ -63,14 +64,14 @@ endif
 
 
 FLAGS_ERRORS	=	-Wall -Werror -Wextra
-FLAGS_INCLUDES	=	-I$(INCLUDES_DIR) -I$(LIBFT_DIR) -I$(MLX_DIR)
+FLAGS_INCLUDES	=	-I$(INCLUDES_DIR) -I$(LIBFT_INC_DIR) -I$(LIBFT_DIR) -I$(MLX_DIR)
 FLAGS_OPTI		=	-O2 -funroll-loops
-FLAGS_DEBUG		=	-g -fsanitize=address
+FLAGS_DEBUG		=	-g #-fsanitize=address
 FLAGS_LIB		+=	-L $(LIBFT_DIR) -lft -L $(MLX_DIR) -lmlx
 
 
-FLAGS_FINAL		=	$(FLAGS_ERRORS) $(FLAGS_OPTI) \
-					$(FLAGS_INCLUDES)
+FLAGS_FINAL		=	$(FLAGS_ERRORS)  \
+					$(FLAGS_INCLUDES) $(FLAGS_DEBUG)
 					
 # MLX		=	-L ./mlx -lmlx -framework OpenGL -framework AppKit
 

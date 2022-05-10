@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:28:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:19 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:40:28 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	set_texture(char *path, int num, t_cub *cub)
 			&cub->texture[num]->endian);
 }
 
-static void	texture_format_check(char *ident, int i, t_cub *cub)
+static void	texture_format_check(char *ident, int i)
 {
 	while (ident[i] == ' ')
 		i++;
@@ -49,7 +49,7 @@ static void	texture_format_check(char *ident, int i, t_cub *cub)
 		err_exit(7);
 }
 
-static char	*path_from_str(char *ident, int i, t_cub *cub)
+static char	*path_from_str(char *ident, int i)
 {
 	char	*path;
 	int		size;
@@ -123,8 +123,8 @@ void	texture(char *ident, t_cub *cub)
 	i += 2;
 	while (ident[i] == ' ')
 		i++;
-	texture_format_check(ident, i, cub);
-	path = path_from_str(ident, i, cub);
+	texture_format_check(ident, i);
+	path = path_from_str(ident, i);
 	set_texture(path, num, cub);
 	ft_putendl_fd("\t\t\tOK", 1);
 }

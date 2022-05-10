@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:57:34 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:07:13 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:57:22 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int	event_destroy_window(void *param)
 	t_cub	*cub;
 
 	cub = (t_cub *)param;
+    free(cub);
 	exit(0);
 	return (SUCCESS);
 }

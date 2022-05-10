@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:03:19 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:25 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:41:46 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	parse_map(t_list **file, t_cub *cub)
 		k = 0;
 		while (++k < cub->map_x - 1)
 		{
-			check_symbol(tmp_map, j, k, cub);
+			check_symbol(tmp_map, j, k);
 			if (ft_strchr("NSWE", tmp_map[j][k]))
 			{
 				set_dir(tmp_map[j][k], k, j, cub);

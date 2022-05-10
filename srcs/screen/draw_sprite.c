@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:09:51 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:45 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:57:36 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,6 @@ static void	pix_on_sprite_image(t_draw_sprite *ds, t_cub *cub)
 
 static void	make_sprite(t_draw_sprite *ds, t_cub *cub, t_ray *ray)
 {
-	int	check;
-
 	ds->sprite_x = ds->sprites[ds->i].x - (cub->plr->pos_x - 0.5);
 	ds->sprite_y = ds->sprites[ds->i].y - (cub->plr->pos_y - 0.5);
 	calcul_values(ds, cub);

@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:07:00 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:47:20 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ static void	determine_side_draw(t_ray *ray, t_cub *cub,
 	ver_line_texture_pic(line, cub, pic, ray);
 }
 
-static void	draw_floor(t_ray *ray, t_cub *cub,
-						t_line *line, double wall_x)
+static void	draw_floor(t_ray *ray, double wall_x)
 {
 	if ((ray->side == 0 || ray->side == 1) && ray->dir_x > 0)
 	{
@@ -100,7 +99,7 @@ void	texturisation(t_ray *ray, t_cub *cub)
 	wall_x -= floor(wall_x);
 	if (cub->map[ray->map_y][ray->map_x] == 1)
 		determine_side_draw(ray, cub, line, wall_x);
-	draw_floor(ray, cub, line, wall_x);
+	draw_floor(ray, wall_x);
 	if (ray->draw_end < 0)
 		ray->draw_end = cub->height;
 	ver_floor_and_cell(line, cub, ray);

@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:29:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:48 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:56:40 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	get_color(unsigned int clr1, unsigned int clr2)
 	return(clr);
 }
 
-static void	draw_sqaure(t_cub *cub, int x, int y, unsigned int color)
+static void	draw_square(t_cub *cub, unsigned int color)
 {
 	int i;
 	int	j;
@@ -56,8 +56,7 @@ static unsigned int    set_color(int x, int y, t_map *map, t_cub *cub)
         color = BLACK;
     else if (map->map[y][x] == 1)
         color = WHITE;
-    else
-        color = BLUE;
+    color = BLUE;
 	return (color);
 }
 
@@ -76,7 +75,7 @@ void    draw_map(t_cub *cub, t_map *map)
         while (++x < cub->map_x)
         {
             color = set_color(x, y, map, cub);
-			draw_sqaure(cub, x, y, color);
+			draw_square(cub, color);
 			map->step_x += map->pix + 1;
         }
 		map->step_y += map->pix + 1;

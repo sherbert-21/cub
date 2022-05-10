@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 16:13:31 by sherbert          #+#    #+#             */
-/*   Updated: 2020/11/09 16:14:05 by sherbert         ###   ########.fr       */
+/*   Created: 2021/12/30 17:46:07 by rantario          #+#    #+#             */
+/*   Updated: 2021/12/30 18:11:01 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-size_t		ft_strlen(const char *str)
+int	ft_abs(long num)
 {
-	size_t i;
-
-	i = 0;
-	if (str != NULL)
-	{
-		while (str[i] && str)
-			i++;
-	}
-	return (i);
+	if (num < 0)
+		return (-num);
+	else
+		return (num);
 }

@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:04:31 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:41:34 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,7 +209,7 @@ void					resolution(char *ident, t_cub *cub);
 void					texture(char *ident, t_cub *cub);
 
 void					parse_map(t_list **file, t_cub *cub);
-void					check_symbol(char **tmp, int j, int k, t_cub *cub);
+void					check_symbol(char **tmp, int j, int k);
 void					check_square(char **tmp, t_cub *cub);
 char					**file_into_map(t_list *file, t_cub *cub);
 void					set_dir(char dir, int x, int y, t_cub *cub);

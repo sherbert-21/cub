@@ -6,13 +6,13 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:06:01 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:34 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:40:57 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-static int	check_square_three(char **tmp, int k, int j, t_cub *cub)
+static int	check_square_three(char **tmp, int k, int j)
 {
 	int	ok;
 
@@ -48,7 +48,7 @@ static int	check_square_two(char **tmp, int k, int j, t_cub *cub)
 		(tmp[j - 1][k] == ' ' && ft_strchr(" 1", tmp[j - 2][k]))))
 		ok = 0;
 	if (ok)
-		ok = check_square_three(tmp, k, j, cub);
+		ok = check_square_three(tmp, k, j);
 	return (ok);
 }
 
@@ -65,7 +65,7 @@ void	check_square(char **tmp, t_cub *cub)
 		err_exit(9);
 }
 
-void	check_symbol(char **tmp, int j, int k, t_cub *cub)
+void	check_symbol(char **tmp, int j, int k)
 {
 	if (tmp[j][k] == ' ')
 	{

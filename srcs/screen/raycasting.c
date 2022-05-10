@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:13 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 18:06:55 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:45:12 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,6 @@ static void	next_step(t_ray *ray, t_player *plr)
 
 static void	init_values(t_ray *ray, t_player *plr, t_cub *cub)
 {
-	int i;
-
-	i = -1;
 	ray->camera_x = (2 * ray->pix) / (double)cub->width - 1;
 	ray->dir_x = plr->dir_x + plr->plane_x * ray->camera_x;
 	ray->dir_y = plr->dir_y + plr->plane_y * ray->camera_x;

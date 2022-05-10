@@ -6,13 +6,13 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:25:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 19:05:21 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 20:09:37 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-static void	skip_space(t_list **lst, t_cub *cub)
+static void	skip_space(t_list **lst)
 {
 	int		i;
 	char	*file;
@@ -53,7 +53,7 @@ static void	set_ident(char *ident_str, t_cub *cub)
 		texture(ident_str, cub);
 }
 
-static int	ident_check(char *ident_str, t_cub *cub)
+static int	ident_check(char *ident_str)
 {
 	int	i;
 
@@ -86,7 +86,7 @@ void	parse_ident(t_list **file_lst, t_cub *cub)
 		file = ft_strdup((*file_lst)->content);
 		if (!file)
 			err_exit(2);
-		if (ident_check(file, cub) == 1)
+		if (ident_check(file) == 1)
 		{
 			set_ident(file, cub);
 			ident++;
@@ -98,7 +98,7 @@ void	parse_ident(t_list **file_lst, t_cub *cub)
 	ft_putstr_fd("\n\t", 1);
 	if (ident != 8)
 		err_exit(3);
-	skip_space(file_lst, cub);
+	skip_space(file_lst);
 	if (!(*file_lst) && ident == 8)
 		err_exit(4);
 }
