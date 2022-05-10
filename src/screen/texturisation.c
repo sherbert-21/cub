@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   texturisation.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 21:55:25 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:12:06 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

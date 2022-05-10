@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:09:51 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 22:49:03 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:12:20 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

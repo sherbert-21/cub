@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ident_parce.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:25:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/25 01:11:12 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:15:35 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	skip_space(t_list **lst, t_cub *cub)
 {

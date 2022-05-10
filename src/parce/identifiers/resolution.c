@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   resolution.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:17:23 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/05 14:24:58 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:12:29 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/cub3d.h"
+#include "../../include/cub3d.h"
 
 static void	set_resolution(char *ident, char c, t_cub *cub)
 {

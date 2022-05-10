@@ -2,9 +2,8 @@ SHELL = /bin/zsh
 
 NAME	= 	cub3d
 
-FLAGS	= 	-Wall -Werror -Wextra -g -fsanitize=address
-
 SRC		= 	\
+			src/main/cub3d.c \
             src/parce/identifiers/ident_parce.c \
             src/parce/identifiers/resolution.c \
             src/parce/identifiers/texture.c \
@@ -26,22 +25,20 @@ SRC		= 	\
             src/utils/init_struct.c \
             src/utils/bmp.c \
 	        src/utils/manage.c \
-            cub3d.c
 
 OBJ		= 	$(SRC:.c=.o)
 
-INC		= -I ./include -I ./libft -I ./mlx
+# INC		= -I ./include -I ./libft -I ./mlx
 
-LIB_DIR = ./libft
-
-
+INCLUDES_DIR 	=	./includes/
+LIBFT_DIR		=	./libft/
 
 # MLX for Linux && Darwin
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	MLX = libmlx.a
 	MLX_DIR = ./minilibx-linux
-	LDFLAGS += -lX11 -lXext -lm
+	FLAGS_LIB += -lX11 -lXext -lm
 endif
 ifeq ($(UNAME_S),Darwin)
 	UNAME_R := $(shell uname -r | cut -d. -f1)
@@ -53,11 +50,21 @@ ifeq ($(UNAME_S),Darwin)
 	ifeq ($(VER),old)
 		MLX = libmlx.a
 		MLX_DIR = ./minilibx_macos
-		LDFLAGS += -framework OpenGL -framework AppKit
+		FLAGS_LIB += -framework OpenGL -framework AppKit
 	endif
 endif
 
-LDFLAGS +=	-L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
+
+FLAGS_ERRORS	=	-Wall -Werror -Wextra
+FLAGS_INCLUDES	=	-I$(INCLUDES_DIR) -I$(LIBFT_DIR) -I$(MLX_DIR)
+FLAGS_OPTI		=	-O2 -funroll-loops
+FLAGS_DEBUG		=	-g -fsanitize=address
+FLAGS_LIB		=	-L$(LIBFT_DIR) -lft -L$(MLX_DIR) -lmlx
+
+
+FLAGS_FINAL		=	$(FLAGS_ERRORS) $(FLAGS_INCLUDES) \
+					$(FLAGS_OPTI) $(FLAGS_DEBUG) $(FLAGS_LIB)
+
 
 
 # MLX		=	-L ./mlx -lmlx -framework OpenGL -framework AppKit
@@ -65,19 +72,21 @@ LDFLAGS +=	-L$(LIB_DIR) -lft -L$(MLX_DIR) -lmlx
 all : $(NAME)
 
 lft:
-	@$(MAKE) -s -C $(LIB_DIR)
-	@$(MAKE) -s -C $(MLX_DIR)
+	echo $(FLAGS_FINAL)
+	$(MAKE) -s -C $(LIBFT_DIR)
+	$(MAKE) -s -C $(MLX_DIR)
 
 $(NAME): $(OBJ) lft
-	gcc $(FLAGS) $(INC) $(OBJ) $(LDFLAGS) -o $(NAME)
+	echo $(FLAGS_FINAL)
+	gcc $(FLAGS_FINAL) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) -rf $(OBJ)
-	make -C ./libft/ clean
-	make -C ./mlx/ clean
+	$(MAKE) -C $(LIBFT_DIR) clean
+	$(MAKE) -C $(MLX_DIR) clean
 
 fclean: clean
-	$(RM) -f $(NAME)
-	make -C ./libft/ fclean
+	$(RM) -rf $(NAME)
+	$(MAKE) -C $(LIBFT_DIR) fclean
 
 re: fclean all
