@@ -1,44 +1,53 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/matt/Documents/GIT/ECOLE42/cub'
  
-make -C ./libft
+make -s -C ./libft
  
-make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/cub/libft'
-make[1]: Nothing to be done for 'all'.
-make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/cub/libft'
- 
-make -C ./minilibx-linux
+make -s -C minilibx-linux
  
 make[1]: Entering directory '/home/matt/Documents/GIT/ECOLE42/cub/minilibx-linux'
 ./configure
 make[1]: Leaving directory '/home/matt/Documents/GIT/ECOLE42/cub/minilibx-linux'
  
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/main/cub3d.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/identifiers/ident_parce.o src/main/cub3d.c
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/identifiers/ident_parse.o srcs/parse/identifiers/ident_parse.c
  
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/identifiers/resolution.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/identifiers/texture.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/map/map.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/map/symbol_check.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/map/tmp_map.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/map/player.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/file_parce.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/parce/valid_input.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/screen/raycasting.o src/main/cub3d.c
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/identifiers/texture.o srcs/parse/identifiers/texture.c
  
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/screen/screen.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/screen/texturisation.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/screen/mini_map.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/utils/move.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/utils/turn.o src/main/cub3d.c
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/map/map.o srcs/parse/map/map.c
  
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/screen/draw_sprite.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/screen/ray_walls.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/utils/err_exit.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/utils/init_struct.o src/main/cub3d.c
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/map/symbol_check.o srcs/parse/map/symbol_check.c
  
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/utils/bmp.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx -c -o src/utils/manage.o src/main/cub3d.c
-gcc -Wall -Werror -Wextra -O2 -funroll-loops -g -fsanitize=address -I./includes -I./libft -I./minilibx-linux -L./libft -lft -L./minilibx-linux -lmlx src/main/cub3d.o src/parce/identifiers/ident_parce.o src/parce/identifiers/resolution.o src/parce/identifiers/texture.o src/parce/map/map.o src/parce/map/symbol_check.o src/parce/map/tmp_map.o src/parce/map/player.o src/parce/file_parce.o src/parce/valid_input.o src/screen/raycasting.o src/screen/screen.o src/screen/texturisation.o src/screen/mini_map.o src/utils/move.o src/utils/turn.o src/screen/draw_sprite.o src/screen/ray_walls.o src/utils/err_exit.o src/utils/init_struct.o src/utils/bmp.o src/utils/manage.o -o cub3d
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/map/tmp_map.o srcs/parse/map/tmp_map.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/map/player.o srcs/parse/map/player.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/file_parse.o srcs/parse/file_parse.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/parse/valid_input.o srcs/parse/valid_input.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/screen/raycasting.o srcs/screen/raycasting.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/screen/screen.o srcs/screen/screen.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/screen/texturisation.o srcs/screen/texturisation.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/screen/mini_map.o srcs/screen/mini_map.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/utils/move.o srcs/utils/move.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/utils/turn.o srcs/utils/turn.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/utils/err_exit.o srcs/utils/err_exit.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/utils/init_struct.o srcs/utils/init_struct.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/utils/bmp.o srcs/utils/bmp.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/utils/manage.o srcs/utils/manage.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/screen/draw_sprite.o srcs/screen/draw_sprite.c
+ 
+gcc -Wall -Werror -Wextra -O2 -funroll-loops -I./includes -I./libft -Iminilibx-linux -c -o srcs/screen/ray_walls.o srcs/screen/ray_walls.c
+gcc srcs/cub3d.o srcs/parse/identifiers/resolution.o srcs/parse/identifiers/ident_parse.o srcs/parse/identifiers/texture.o srcs/parse/map/map.o srcs/parse/map/symbol_check.o srcs/parse/map/tmp_map.o srcs/parse/map/player.o srcs/parse/file_parse.o srcs/parse/valid_input.o srcs/screen/raycasting.o srcs/screen/screen.o srcs/screen/texturisation.o srcs/screen/mini_map.o srcs/utils/move.o srcs/utils/turn.o srcs/utils/err_exit.o srcs/utils/init_struct.o srcs/utils/bmp.o srcs/utils/manage.o srcs/screen/draw_sprite.o srcs/screen/ray_walls.o -o cub3d -lX11 -lXext -lm -L ./libft -lft -L minilibx-linux -lmlx
 make: Leaving directory '/home/matt/Documents/GIT/ECOLE42/cub'
  

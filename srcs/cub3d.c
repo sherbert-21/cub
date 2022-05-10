@@ -6,7 +6,7 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 16:16:45 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:15:15 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:04:31 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 	init_texture(cub, 7);
 	init_plr(cub);
 	init_game_keybuffer(cub);
-	file_parce(argc, argv, cub);
+	file_parse(argc, argv, cub);
 	cub->screen = new_pic(cub, cub->width, cub->height);
 	if (cub->save_bmp == 1)
 		ray(cub);

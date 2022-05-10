@@ -6,11 +6,11 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:16:13 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:12:23 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:43 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	valid_argc(int argc, char **argv)
 {

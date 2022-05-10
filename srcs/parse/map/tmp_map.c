@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tmp_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:01:24 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/26 15:21:36 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:32 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	width_and_heigth_of_map(t_list *file, t_cub *cub)
 {

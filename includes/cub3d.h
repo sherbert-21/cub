@@ -6,14 +6,14 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:58:48 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:33:56 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:04:31 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
-# include <libft.h>
-# include <mlx.h>
+# include "libft.h"
+# include "mlx.h"
 # include <fcntl.h>
 # include <math.h>
 
@@ -201,14 +201,14 @@ void					init_game_keybuffer(t_cub *cub);
 int						init_game_sprite(t_cub *cub);
 t_pic					*new_pic(t_cub *cub, int x_len, int y_len);
 
-void					file_parce(int argc, char **argv, t_cub *cub);
+void					file_parse(int argc, char **argv, t_cub *cub);
 void					valid_input(int argc, char **argv, t_cub *cub);
 
-void					parce_ident(t_list **file_lst, t_cub *cub);
+void					parse_ident(t_list **file_lst, t_cub *cub);
 void					resolution(char *ident, t_cub *cub);
 void					texture(char *ident, t_cub *cub);
 
-void					parce_map(t_list **file, t_cub *cub);
+void					parse_map(t_list **file, t_cub *cub);
 void					check_symbol(char **tmp, int j, int k, t_cub *cub);
 void					check_square(char **tmp, t_cub *cub);
 char					**file_into_map(t_list *file, t_cub *cub);

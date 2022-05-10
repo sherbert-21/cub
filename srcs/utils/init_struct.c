@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:55:22 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 22:21:43 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:07:11 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 void	init_mini_map(t_cub *cub)
 {

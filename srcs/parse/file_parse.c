@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   file_parce.c                                       :+:      :+:    :+:   */
+/*   file_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:12:20 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:12:25 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:40 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
-void	file_parce(int argc, char **argv, t_cub *cub)
+void	file_parse(int argc, char **argv, t_cub *cub)
 {
 	t_list	*file;
 	char	*line;
@@ -31,8 +31,8 @@ void	file_parce(int argc, char **argv, t_cub *cub)
 	ft_lstadd_back(&file, ft_lstnew(line));
 	ft_putendl_fd("\tChecking file...", 1);
 	ft_putendl_fd("\tIdentifiers:", 1);
-	parce_ident(&file, cub);
+	parse_ident(&file, cub);
 	ft_putstr_fd("Map:", 1);
-	parce_map(&file, cub);
+	parse_map(&file, cub);
 	ft_putendl_fd("\t\t\t\t\t\t\tOK", 1);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:03:19 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/03 21:52:29 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:25 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/cub3d.h"
+#include "cub3d.h"
 #include <stdio.h>
 
 static void	symbol_int_map(char ch, int x, int y, t_cub *cub)
@@ -80,7 +80,7 @@ static void	char_to_int_map(char **map, t_cub *cub)
 	}
 }
 
-void	parce_map(t_list **file, t_cub *cub)
+void	parse_map(t_list **file, t_cub *cub)
 {
 	char	**tmp_map;
 	int		k;

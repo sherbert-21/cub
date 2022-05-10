@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   player.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:04:47 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/04 08:14:48 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:29 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	set_camera(t_cub *cub, double dir_x, double plane_x, double plane_y)
 {

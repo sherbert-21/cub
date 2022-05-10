@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ident_parce.c                                      :+:      :+:    :+:   */
+/*   ident_parse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:25:25 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:15:35 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 19:05:21 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static int	ident_check(char *ident_str, t_cub *cub)
 	return (ERR);
 }
 
-void	parce_ident(t_list **file_lst, t_cub *cub)
+void	parse_ident(t_list **file_lst, t_cub *cub)
 {
 	int		ident;
 	char	*file;

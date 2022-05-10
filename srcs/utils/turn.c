@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   turn.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:10:56 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:19:41 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:07:18 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 void	turn_left(t_cub *cub)
 {

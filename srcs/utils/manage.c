@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   manage.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:57:34 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:12:27 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:07:13 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 int	loop(void *param)
 {

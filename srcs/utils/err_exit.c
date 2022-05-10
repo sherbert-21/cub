@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   err_exit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:54:27 by sherbert          #+#    #+#             */
-/*   Updated: 2022/04/03 21:14:55 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:07:08 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	err_map(int err_code)
 {

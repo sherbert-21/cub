@@ -6,11 +6,11 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:47:26 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:12:03 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:07:04 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static int	data_to_bitmap(t_pic *img, int fd)
 {

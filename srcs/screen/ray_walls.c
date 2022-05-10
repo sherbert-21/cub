@@ -6,11 +6,11 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:34:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:12:15 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:52 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 void	perp_and_height(t_ray *ray, t_player *plr, t_cub *cub)
 {

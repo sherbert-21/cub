@@ -6,11 +6,11 @@
 /*   By: rantario <rantario@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 15:29:36 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/10 17:12:18 by rantario         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:06:48 by rantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static int	get_color(unsigned int clr1, unsigned int clr2)
 {
