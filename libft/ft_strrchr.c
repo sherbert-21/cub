@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/01 17:59:40 by sherbert          #+#    #+#             */
-/*   Updated: 2020/05/01 17:59:43 by sherbert         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:07:50 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (*str != '\0')
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *str, int c)
 	while (i-- >= 0)
 	{
 		if (*str == c)
-			return ((char*)str);
+			return ((char *)str);
 		str--;
 	}
 	return (NULL);

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 14:14:29 by sherbert          #+#    #+#             */
-/*   Updated: 2020/05/05 14:14:31 by sherbert         ###   ########.fr       */
+/*   Updated: 2021/10/22 10:02:19 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_sign(int nb)
+static int	ft_sign(int nb)
 {
-	int sign;
+	int	sign;
 
 	sign = 1;
 	if (nb < 0)
@@ -25,7 +25,7 @@ static int		ft_sign(int nb)
 	return (sign);
 }
 
-static int		ft_len(int nb)
+static int	ft_len(int nb)
 {
 	int		i;
 	int		nbr;
@@ -46,7 +46,7 @@ static int		ft_len(int nb)
 	return (i);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	unsigned int	i;
 	int				sign;
@@ -58,7 +58,8 @@ char			*ft_itoa(int n)
 	sign = ft_sign(n);
 	if (sign == -1)
 		n *= -1;
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (!str)
 		return (NULL);
 	str[i] = '\0';
 	if (n == 0)

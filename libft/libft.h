@@ -6,7 +6,7 @@
 /*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 16:10:45 by sherbert          #+#    #+#             */
-/*   Updated: 2022/05/04 08:33:37 by sherbert         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:11:48 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,52 @@
 # include <string.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include <stdarg.h>
 
-typedef struct		s_list
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
+
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef	struct		s_flags
+{
+	int				already_print;
+	int				type;
+	int				width;
+	int				minus;
+	int				zero;
+	int				dot;
+	int				star;
+}					t_flags;
+
+int					ft_printf(const char *str, ...);
+int					ft_is_in_type_list(int c);
+int					ft_is_in_flags_list(int c);
+int					ft_treatment(int c, t_flags flags, va_list args);
+int					ft_treat_width(int width, int minus, int has_zero);
+int					ft_putstrprec(char *str, int prec);
+int					ft_treat_char(char c, t_flags flags);
+int					ft_treat_string(char *str, t_flags flags);
+int					ft_treat_int(int i, t_flags flags);
+int					ft_treat_percent(t_flags flags);
+int					ft_treat_hexa(unsigned int ui, int lower, t_flags flags);
+int					ft_treat_uint(unsigned int unsi, t_flags flags);
+int					ft_flag_dot(const char *save, int start,
+					t_flags *flags, va_list args);
+int					ft_putchar(int c);
+int					ft_treat_pointer(unsigned long long pointer, t_flags flags);
+
+char				*ft_ull_base(unsigned long long ull, int base);
+char				*ft_u_itoa(unsigned int n);
+char				*ft_str_tolower(char *str);
+
+t_flags				ft_flag_minus(t_flags flags);
+t_flags				ft_flag_width(va_list args, t_flags flags);
+t_flags				ft_flag_digit(char c, t_flags flags);
 
 int					ft_atoi(const char *str);
 int					ft_isascii(int c);
@@ -67,16 +107,20 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void*));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void*),
-								void (*del)(void*));
+						void (*del)(void*));
 
-void				save_free(char **str);
 char				*ft_strdup_gnl(char *s1, int *err);
 char				*ft_strjoin_gnl(char *s1, char *s2, int *err);
 char				*ft_strcpy(char *dest, char *src);
 int					get_next_line(int fd, char **line);
-int	*clr_add(int *clr1, int *clr2);
-int	*int_to_rgb(unsigned int color);
-unsigned int	rgb_to_int(int r, int g, int b);
+
+void				save_free(char **str);
+
+void				check_int(int len, int *a);
+int					abs(int n);
+int					*clr_add(int *clr1, int *clr2);
+int					*int_to_rgb(unsigned int color);
+unsigned int		rgb_to_int(int r, int g, int b);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10

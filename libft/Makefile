@@ -6,7 +6,7 @@
 #    By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/07 19:44:28 by sherbert          #+#    #+#              #
-#    Updated: 2022/05/04 08:44:09 by sherbert         ###   ########.fr        #
+#    Updated: 2022/06/06 14:15:10 by sherbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ HEAD = libft.h
 
 SRC = \
 ft_atoi.c \
+ft_save_free.c \
 ft_isascii.c \
 ft_isalnum.c \
 ft_isalpha.c \
@@ -60,9 +61,27 @@ ft_lstdelone.c \
 ft_lstclear.c \
 ft_lstiter.c \
 ft_lstmap.c \
+ft_check.c \
 gnl.c \
+utils_gnl.c \
+ft_printf.c \
+ft_treatment.c \
+ft_treat_width.c \
+ft_u_itoa.c \
+ft_ull_base.c \
+ft_putchar.c \
+ft_str_tolower.c \
+ft_putstrprec.c \
+ft_treat_string.c \
+ft_treat_char.c \
+ft_treat_pointer.c \
+ft_treat_int.c \
+ft_treat_uint.c \
+ft_treat_percent.c \
+ft_treat_hexa.c \
+ft_treat_flags.c \
+abs.c \
 ft_rgb.c \
-utils_gnl.c
 
 
 OBJ		= 	$(SRC:.c=.o)

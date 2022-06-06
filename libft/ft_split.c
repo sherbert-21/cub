@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 17:58:40 by sherbert          #+#    #+#             */
-/*   Updated: 2020/05/06 17:58:41 by sherbert         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:13:37 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_numwords(char const *s, char c)
 {
-	int words;
-	int if_word;
+	int	words;
+	int	if_word;
 
 	words = 0;
 	if_word = 1;
@@ -35,7 +35,7 @@ static int	ft_numwords(char const *s, char c)
 
 static int	ft_numchars(char const *s, char c, int i)
 {
-	int chars;
+	int	chars;
 
 	chars = 0;
 	while (s[i] != c && s[i] != '\0')
@@ -51,13 +51,13 @@ static char	**ft_free_split(char **src, int i)
 	while (i > 0)
 	{
 		i--;
-		free((void*)src[i]);
+		free((void *)src[i]);
 	}
-	free((void*)src);
+	free((void *)src);
 	return (NULL);
 }
 
-char		**ft_if_split(char const *s, char c)
+char	**ft_if_split(char const *s, char c)
 {
 	char	**split;
 	int		i;
@@ -66,15 +66,16 @@ char		**ft_if_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(split = (char**)malloc(sizeof(char*) * (ft_numwords(s, c) + 1))))
+	split = (char **)malloc(sizeof(char *) * (ft_numwords(s, c) + 1));
+	if (!split)
 		return (NULL);
 	while (i < ft_numwords(s, c) && s[j])
 	{
 		k = 0;
 		while (s[j] == c)
 			j++;
-		if (!(split[i] = (char*)malloc(sizeof(char) *
-			(ft_numchars(s, c, j) + 1))))
+		split[i] = (char *)malloc(sizeof(char) * (ft_numchars(s, c, j) + 1));
+		if (!split)
 			return (ft_free_split(split, i));
 		while (s[j] != c && s[j] != '\0')
 			split[i][k++] = s[j++];
@@ -85,7 +86,7 @@ char		**ft_if_split(char const *s, char c)
 	return (split);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	if (s == NULL)
 		return (NULL);

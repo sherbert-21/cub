@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utils_gnl.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 23:25:45 by sherbert          #+#    #+#             */
-/*   Updated: 2020/09/26 23:25:55 by sherbert         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:35:40 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strdup_gnl(char *s, int *ret)
+char	*ft_strdup_gnl(char *s, int *ret)
 {
 	char	*str;
 	char	*ptr;
@@ -21,7 +21,8 @@ char			*ft_strdup_gnl(char *s, int *ret)
 	i = 0;
 	while (s[i])
 		i++;
-	if (!(str = (char*)malloc((i + 1) * sizeof(char))))
+	str = (char *)malloc((i + 1) * sizeof(char));
+	if (!str)
 	{
 		*ret = -1;
 		return (NULL);
@@ -33,13 +34,14 @@ char			*ft_strdup_gnl(char *s, int *ret)
 	return (str);
 }
 
-char			*ft_strjoin_gnl(char *s1, char *s2, int *ret)
+char	*ft_strjoin_gnl(char *s1, char *s2, int *ret)
 {
 	unsigned int	i;
 	char			*str;
 
 	i = 0;
-	if (!(str = (char*)malloc((ft_strlen(s1) + ft_strlen(s2) + 1))))
+	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
 	{
 		*ret = -1;
 		return (NULL);
@@ -52,7 +54,7 @@ char			*ft_strjoin_gnl(char *s1, char *s2, int *ret)
 	return (str);
 }
 
-char			*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int			i;
 
@@ -64,13 +66,4 @@ char			*ft_strcpy(char *dest, char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-void			save_free(char **str)
-{
-	if (str && *str)
-	{
-		free(*str);
-		*str = NULL;
-	}
 }

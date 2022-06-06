@@ -3,19 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sherbert <sherbert@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: sherbert <sherbert@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 19:16:32 by sherbert          #+#    #+#             */
-/*   Updated: 2020/04/29 19:16:36 by sherbert         ###   ########.fr       */
+/*   Updated: 2021/12/11 16:05:46 by sherbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	compare(const char *str, int sign, int i)
+{
+	unsigned int	nbr;
+
+	nbr = 0;
+	while (str[i])
+	{
+		nbr = nbr * 10 + (str[i] - '0');
+		i++;
+	}
+	if (sign == -1)
+	{
+		if (nbr > 2147483648)
+			return (1);
+	}
+	else
+	{
+		if (nbr > 2147483647)
+			return (1);
+	}
+	return (0);
+}
+
 static int	ft_overflow(const char *str, int i, int sign)
 {
-	int k;
-	int j;
+	int	k;
+	int	j;
 
 	k = 0;
 	j = i;
@@ -24,24 +47,24 @@ static int	ft_overflow(const char *str, int i, int sign)
 		j++;
 		k++;
 	}
-	if (k == 10 && (str[i] >= '3' || ft_strncmp(&str[i], "214748364", 9) == 0))
+	if (compare(str, sign, i))
 	{
-		if (sign > 0 && (str[j] > '7' || str[i] >= '3'))
+		if (sign > 0)
 			return (-1);
-		if (sign < 0 && (str[j] > '8' || str[i] >= '3'))
+		else
 			return (0);
 	}
-	else if (k > 10 && sign > 0)
+	if (k > 10 && sign > 0)
 		return (-1);
 	else if (k > 10 && sign < 0)
 		return (0);
 	return (1);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	nbr;
-	int i;
+	int	i;
 	int	sign;
 
 	i = 0;
